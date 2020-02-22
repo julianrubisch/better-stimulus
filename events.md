@@ -4,7 +4,18 @@ title: Events
 
 # Events
 
-ˋˋˋjs
+<div class="bad">
+```js
 initialize() {
 }
-ˋˋˋ
+```
+</div>
+
+<div class="good">
+```js
+successHandler(e) {
+}
+```
+</div>
+
+
