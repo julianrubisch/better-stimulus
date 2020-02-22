@@ -1,23 +1,30 @@
 ---
 title: Events
+nav_order: 2
 ---
 
 # Events
 
 ## Register Global Events in Your Markup
 
-### BAD
+Bad
+{: .label .label-red }
+
 ```js
 initialize() {
   document.addEventListener(...);
 }
 ```
+{: .border-red }
 
-### GOOD
+Good
+{: .label .label-green }
+
 ```js
 successHandler(e) {
 }
 ```
+{: .border-green }
 
 ### Rationale
 
