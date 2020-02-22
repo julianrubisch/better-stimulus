@@ -4,22 +4,16 @@ title: Events
 
 # Events
 
-
-<div class="bad">
-
+### BAD
 ```js
 initialize() {
+  document.addEventListener(...);
 }
 ```
 
-</div>
-
-<div class="good">
-  
+### GOOD
 ```js
 successHandler(e) {
 }
 ```
-
-</div>
 
