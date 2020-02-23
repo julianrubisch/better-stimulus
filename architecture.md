@@ -39,7 +39,7 @@ export default class extends ApplicationController {
 You can make use of JavaScript's class inheritance to set up an "Application Controller" that will serve as the foundation for all of your controllers to build upon. This not only reduces boilerplate, but it's also a convenient way to set up lifecycle callback methods for your entire application.
 
 ### Counterindications
-Inheritance isn't always the answer to share behavior. Before bloating your `ApplicationController`, ask yourself if what you're implementing isn't a specialization but a [role](https://en.wikipedia.org/wiki/Data,_context_and_interaction) (use mixins) or a collaborator (use composition).
+Inheritance isn't always the answer to share behavior. Before bloating your `ApplicationController`, ask yourself if what you're implementing isn't a specialization but a [role](https://en.wikipedia.org/wiki/Data,_context_and_interaction) (has a "acts as a" relationship to your class - use mixins) or a attributes or property (has a "has a" relationship to your class - use [composition](https://en.wikipedia.org/wiki/Composition_over_inheritance)).
 
 ### References
 - Courtesy of [https://docs.stimulusreflex.com/patterns](https://docs.stimulusreflex.com/patterns)
