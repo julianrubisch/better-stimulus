@@ -1,2 +1,5 @@
 title: "Better StimulusJS"
 remote_theme: pmarsceill/just-the-docs
+aux_links:
+  "Github":
+    - "//github.com/julianrubisch/better-stimulus"
