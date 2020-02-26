@@ -7,8 +7,7 @@ parent: With rails-ujs
 
 ```html
 <div controller="remote-form">
-  <%= form_with(model: @article, html: { data: { action: "ajax:success->remote-form#onPostSuccess",
-                                                 target: "remote-form.form" } }) do |f| %>
+  <%= form_with(model: @article, html: { data: { action: "ajax:success->remote-form#onPostSuccess" } }) do |f| %>
     <%= select_tag "author", options_from_collection_for_select(@people, "id", "name"),
                    data: { action: "change->remote-form#update" } %>
   <% end %>
@@ -22,14 +21,12 @@ Won't Work
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = [ "form" ];
-
   onPostSuccess(event) {
     console.log("success!");
   }
 
   update() {
-    this.formTarget.submit();
+    this.element.submit();
   }
 }
 ```
@@ -43,14 +40,12 @@ import Rails from "@rails/ujs";
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = [ "form" ];
-
   onPostSuccess(event) {
     console.log("success!");
   }
 
   update() {
-    Rails.fire(this.formTarget, 'submit');
+    Rails.fire(this.element, 'submit');
   }
 }
 ```
