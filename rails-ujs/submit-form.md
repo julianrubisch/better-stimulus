@@ -57,4 +57,4 @@ Rails-ujs intercepts form submit events that have a `data-remote="true"` attribu
 ### Reference
 - [Rails UJS](https://github.com/rails/rails/blob/master/actionview/app/assets/javascripts/rails-ujs/start.coffee#L58)
 - [HTMLFormElement.submit](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit)
-- [https://discourse.stimulusjs.org/t/programatically-submit-a-remote-form/492](https://discourse.stimulusjs.org/t/programatically-submit-a-remote-form/492)
+- [Rails UJS Wiki](https://github.com/rails/jquery-ujs/wiki/How-to-trigger-a-form-submit-from-code)
