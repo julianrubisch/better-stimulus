@@ -76,6 +76,11 @@ export default class extends Controller {
 {: .border-green}
 
 ### Rationale
+Books have been written about this very single topic, but let it be said that classes/modules that serve a single responsibility are
+
+1. **easy to reuse** - in our example above the `page_controller` can only be used on this very page (or one with the same strucute), whereas `modal_controller` and `form_controller` could be used on any modal or form element, and
+2. **easy to change** - because every responsibility has a single point of realization, changes are cheap: instead of having to implement a new functionality in several places, there's only one spot where you have to install the new behavior.
 
 ### Reference
+- [Practical Object Oriented Design](https://www.poodr.com/) by Sandi Metz
 - [Wikipedia](https://en.wikipedia.org/wiki/Single_responsibility_principle)
