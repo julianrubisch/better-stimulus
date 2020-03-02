@@ -1,6 +1,6 @@
 ---
 title: Without Rails
-nav_order: 6
+nav_order: 8
 ---
 
 # Without Rails
