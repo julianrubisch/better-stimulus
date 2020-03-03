@@ -1,7 +1,7 @@
 ---
 title: Use Lifecycle Events for Setup and Teardown
 nav_order: 1
-parent: Library Wrappers
+parent: Integrating Libraries
 ---
 
 # Use Lifecycle Events for Setup and Teardown
