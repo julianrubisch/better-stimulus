@@ -6,6 +6,10 @@ aux_links:
     - "//github.com/julianrubisch/better-stimulus"
 plugins:
   - jekyll-relative-links
+  - jekyll-analytics
 relative_links:
   enabled:     true
   collections: true
+jekyll_analytics:
+  GoogleAnalytics:
+    id: UA-159938381-1
