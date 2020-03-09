@@ -6,6 +6,8 @@ parent: Architecture
 
 # Write Configurable Controllers
 
+#### by @julianrubisch {% avatar julianrubisch size=24 %}
+{: .fs-3 }
 
 Bad
 {: .label .label-red}

@@ -6,11 +6,15 @@ parent: Architecture
 
 # Application Controller
 
+#### by @julianrubisch {% avatar julianrubisch size=24 %}
+{: .fs-3 }
+
+
 Good
 {: .label .label-green}
 
-### `application_controller.js`
 ```js
+// application_controller.js
 import { Controller } from "stimulus";
 
 export default class extends Controller {
@@ -21,8 +25,8 @@ export default class extends Controller {
 ```
 {: .border-green}
 
-### `custom_controller.js`
 ```js
+// custom_controller.js
 import ApplicationController from "./application_controller";
 
 export default class extends ApplicationController {

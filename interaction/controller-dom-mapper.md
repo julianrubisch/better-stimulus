@@ -6,6 +6,10 @@ nav_order: 1
 
 # Controller DOM Mapper
 
+#### by @julianrubisch {% avatar julianrubisch size=24 %}
+{: .fs-3 }
+
+
 ## Pain Point
 - You're trying to access the internal state of a controller from outside of that controller
 - Your controller needs to call a method on another controller

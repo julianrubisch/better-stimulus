@@ -5,6 +5,10 @@ parent: With rails-ujs
 
 # Submit a Form Programmatically
 
+#### by @julianrubisch {% avatar julianrubisch size=24 %}
+{: .fs-3 }
+
+
 ```html
 <div controller="remote-form">
   <%= form_with(model: @article, html: { data: { action: "ajax:success->remote-form#onPostSuccess" } }) do |f| %>

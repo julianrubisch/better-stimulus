@@ -7,6 +7,10 @@ nav_order: 3
 
 ## Register Global Events in Your Markup
 
+#### by @julianrubisch {% avatar julianrubisch size=24 %}
+{: .fs-3 }
+
+
 Bad
 {: .label .label-red }
 

@@ -5,6 +5,10 @@ parent: SOLID
 
 # Single Responsibility Principle
 
+#### by @julianrubisch {% avatar julianrubisch size=24 %}
+{: .fs-3 }
+
+
 Especially when applying Stimulus to your application for the first time, it is tempting to write your controllers in a _page controller_ style, resulting in a disjointed accumulation of unrelated functionality. Resist that temptation - try to write reusable controllers.
 
 Below is a shortened juxtaposition of what that could look like.
