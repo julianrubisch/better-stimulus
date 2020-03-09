@@ -6,6 +6,8 @@ parent: Architecture
 
 # Reusable Controllers
 
+#### by @leastbad {% avatar leastbad size=24 %}
+{: .fs-3 }
 
 Bad
 {: .label .label-red}
