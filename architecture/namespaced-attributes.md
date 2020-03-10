@@ -40,7 +40,7 @@ export default class extends Controller {
 {: .border-green}
 
 ### Rationale
-Building on the [Reusable Controllers](../architecture/reusable-controllers.md) example, we might want to work with an arbitrary set of attributes that are namespace not just to the controller but identified as parameters.
+Building on the [Configuarble Controllers](../architecture/configurable-controllers.md) example, we might want to work with an arbitrary set of attributes that are namespace not just to the controller but identified as parameters.
 
 Unfortunately, Stimulus doesn't make it easy to obtain a list of available attributes, or specify further namespace criteria. Bypassing the Stimulus `data` accessor entirely, we first convert the controller element's dataset to a JS object before emitting an array of its' keys. We retain only the attributes named `data-filter-param-*` and then strip those attributes down to their base names for inclusion in the URL querystring.
 
