@@ -1,5 +1,5 @@
 title: "Better StimulusJS"
-remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs
 url: "https://www.betterstimulus.com"
 aux_links:
   "Github":
@@ -9,6 +9,13 @@ plugins:
   - jekyll-sitemap
   - jekyll-mentions
   - jekyll-avatar
+  - jekyll-feed
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-titles-from-headings
 relative_links:
   enabled:     true
   collections: true
