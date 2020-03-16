@@ -4,6 +4,7 @@ url: "https://www.betterstimulus.com"
 aux_links:
   "Github":
     - "//github.com/julianrubisch/better-stimulus"
+repository: "julianrubisch/better-stimulus"
 plugins:
   - jekyll-relative-links
   - jekyll-sitemap
