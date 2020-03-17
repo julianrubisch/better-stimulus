@@ -1,6 +1,6 @@
 title: "Better StimulusJS"
 theme: just-the-docs
-url: "https://www.betterstimulus.com"
+# url: "https://www.betterstimulus.com"
 aux_links:
   "Github":
     - "//github.com/julianrubisch/better-stimulus"
