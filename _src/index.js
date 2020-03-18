@@ -1,1 +1,3 @@
-console.log("hello from parcel");
+import { Application } from "stimulus";
+
+const application = Application.start();
