@@ -19,6 +19,8 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-pwa-plugin
   - jekyll-turbolinks
+sass:
+  style: compressed
 relative_links:
   enabled:     true
   collections: true
