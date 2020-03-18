@@ -18,6 +18,7 @@ plugins:
   - jekyll-paginate
   - jekyll-titles-from-headings
   - jekyll-pwa-plugin
+  - jekyll-turbolinks
 relative_links:
   enabled:     true
   collections: true

@@ -66,6 +66,9 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-titles-from-headings (0.5.3)
       jekyll (>= 3.3, < 5.0)
+    jekyll-turbolinks (0.0.4)
+      jekyll (>= 3.8, < 4.1)
+      turbolinks-source (~> 5)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     just-the-docs (0.2.7)
@@ -104,6 +107,7 @@ GEM
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
     thread_safe (0.3.6)
+    turbolinks-source (5.2.0)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
     zeitwerk (2.3.0)
@@ -125,6 +129,7 @@ DEPENDENCIES
   jekyll-relative-links
   jekyll-sitemap
   jekyll-titles-from-headings
+  jekyll-turbolinks
   just-the-docs
   tzinfo-data
 
