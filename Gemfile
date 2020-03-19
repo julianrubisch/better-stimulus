@@ -31,8 +31,8 @@ group :jekyll_plugins do
   gem "jekyll-optional-front-matter"
   gem "jekyll-paginate"
   gem "jekyll-titles-from-headings"
-  gem "jekyll-pwa-plugin"
-  gem "jekyll-turbolinks"
+  # gem "jekyll-pwa-plugin"
+  # gem "jekyll-turbolinks"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
