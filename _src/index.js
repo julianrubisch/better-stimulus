@@ -8,9 +8,9 @@ application.register(
   CodeAreaInstrumentationController
 );
 
-// document.addEventListener("turbolinks:load", () => {
-//   document.body.dataset.controller = "code-area-instrumentation";
-// });
+document.addEventListener("turbolinks:load", () => {
+  document.body.dataset.controller = "code-area-instrumentation";
+});
 document.addEventListener("DOMContentLoaded", () => {
   document.body.dataset.controller = "code-area-instrumentation";
 });

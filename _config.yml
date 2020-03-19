@@ -17,15 +17,15 @@ plugins:
   - jekyll-optional-front-matter
   - jekyll-paginate
   - jekyll-titles-from-headings
-  # - jekyll-pwa-plugin
-  # - jekyll-turbolinks
+  - jekyll-pwa-plugin
+  - jekyll-turbolinks
 sass:
   style: compressed
 relative_links:
   enabled:     true
   collections: true
 ga_tracking: UA-159938381-1
-# pwa:
-#   dest_js_directory: assets/js
-# turbolinks:
-#   url: /turbolinks.js
+pwa:
+  dest_js_directory: assets/js
+turbolinks:
+  url: /turbolinks.js
