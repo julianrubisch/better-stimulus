@@ -1,0 +1,9 @@
+{
+  "name": "Better Stimulus",
+  "short_name": "Better Stimulus",
+  "theme_color": "#f5f6fa",
+  "background_color": "#f5f6fa",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/"
+}
