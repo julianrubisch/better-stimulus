@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/julianrubisch/jekyll-pwa
+  revision: 244ec1d3b3418029ac8648816cb2e50c13d69eaa
+  specs:
+    jekyll-pwa-plugin (2.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -55,7 +61,6 @@ GEM
     jekyll-optional-front-matter (0.3.2)
       jekyll (>= 3.0, < 5.0)
     jekyll-paginate (1.1.0)
-    jekyll-pwa-plugin (2.2.3)
     jekyll-relative-links (0.6.1)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (1.5.2)
@@ -125,7 +130,7 @@ DEPENDENCIES
   jekyll-mentions
   jekyll-optional-front-matter
   jekyll-paginate
-  jekyll-pwa-plugin
+  jekyll-pwa-plugin!
   jekyll-relative-links
   jekyll-sitemap
   jekyll-titles-from-headings

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel _src/index.js -d assets/js",
+    "dev": "concurrently \"parcel watch _src/index.js -d assets/js --no-cache\" \"bundle exec jekyll serve -c _config.dev.yml --livereload\"",
     "build": "parcel build _src/index.js -d assets/js"
   },
   "repository": {
@@ -26,6 +26,7 @@
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.7",
+    "concurrently": "^5.1.0",
     "parcel-bundler": "^1.12.4"
   }
 }

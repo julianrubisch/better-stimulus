@@ -6,3 +6,6 @@ _site/
 #*#
 /node_modules/
 /.log/
+
+# Local Netlify folder
+.netlify
