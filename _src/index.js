@@ -1,5 +1,5 @@
 import { Application } from "stimulus";
-import CopyController from "@hopsoft/copy-controller";
+import { CopyController } from "@hopsoft/controllers";
 
 import CodeAreaInstrumentationController from "./controllers/code_area_instrumentation_controller";
 

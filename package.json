@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/julianrubisch/better-stimulus#readme",
   "dependencies": {
-    "@hopsoft/copy-controller": "0.0.5",
+    "@hopsoft/controllers": "0.0.6",
     "stimulus": "^1.1.1"
   },
   "devDependencies": {
