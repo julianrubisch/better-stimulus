@@ -7,9 +7,12 @@ export default class extends Controller {
       .forEach(element => element.remove());
 
     this.element.querySelectorAll("div.highlighter-rouge").forEach(element => {
-      element.dataset.controller = "copy";
-      element.dataset["copyContent"] = "Copied";
-      element.firstChild.insertAdjacentHTML(
+      const wrapper = document.createElement("div");
+      wrapper.dataset.controller = "copy";
+      wrapper.dataset["copyContent"] = "Copied";
+      element.parentNode.insertBefore(wrapper, element);
+      wrapper.appendChild(element);
+      wrapper.firstChild.insertAdjacentHTML(
         "beforeBegin",
         '<div class="d-flex mb-3" style="justify-content: flex-end"><a class="btn btn-outline" data-action="click->copy#copy" data-target="copy.trigger">Copy</a></div>'
       );
