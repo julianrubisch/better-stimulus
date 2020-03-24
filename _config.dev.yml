@@ -1,6 +1,6 @@
 title: "Better StimulusJS"
 theme: just-the-docs
-# url: "https://www.betterstimulus.com"
+url: "http://localhost:4000"
 aux_links:
   "Github":
     - "//github.com/julianrubisch/better-stimulus"
@@ -17,16 +17,11 @@ plugins:
   - jekyll-optional-front-matter
   - jekyll-paginate
   - jekyll-titles-from-headings
-  - jekyll-pwa-plugin
   - jekyll-turbolinks
 sass:
   style: compressed
 relative_links:
   enabled:     true
   collections: true
-ga_tracking: UA-159938381-1
-pwa:
-  dest_js_directory: assets/js
-  enabled: true
 turbolinks:
   url: /turbolinks.js

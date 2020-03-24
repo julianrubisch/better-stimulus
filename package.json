@@ -4,7 +4,9 @@
   "description": "<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section --> [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-) <!-- ALL-CONTRIBUTORS-BADGE:END -->",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"parcel watch _src/index.js -d assets/js --no-cache\" \"bundle exec jekyll serve -c _config.dev.yml --livereload\"",
+    "build": "parcel build _src/index.js -d assets/js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,16 @@
   },
   "homepage": "https://github.com/julianrubisch/better-stimulus#readme",
   "dependencies": {
+    "@hopsoft/controllers": "0.0.8",
+    "parcel-bundler": "^1.12.4",
     "stimulus": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.1.0"
   }
 }

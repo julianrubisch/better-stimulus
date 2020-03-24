@@ -31,7 +31,7 @@ group :jekyll_plugins do
   gem "jekyll-optional-front-matter"
   gem "jekyll-paginate"
   gem "jekyll-titles-from-headings"
-  gem "jekyll-pwa-plugin"
+  gem "jekyll-pwa-plugin", git: "https://github.com/julianrubisch/jekyll-pwa"
   gem "jekyll-turbolinks"
 end
 
