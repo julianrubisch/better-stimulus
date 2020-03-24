@@ -14,9 +14,14 @@ export default class extends Controller {
       wrapper.appendChild(element);
       wrapper.firstChild.insertAdjacentHTML(
         "beforeBegin",
-        '<div class="d-flex mb-3" style="justify-content: flex-end"><a class="btn btn-outline" data-action="click->copy#copy" data-target="copy.trigger">Copy</a></div>'
+        '<div class="d-flex mb-3" style="justify-content: space-between; flex-direction: row-reverse;"><a class="btn btn-outline" data-action="click->copy#copy" data-target="copy.trigger">Copy</a></div>'
       );
       element.querySelector("code").dataset.target = "copy.source";
+    });
+
+    this.element.querySelectorAll("p.label").forEach(label => {
+      const wrapper = label.nextElementSibling;
+      wrapper.firstChild.appendChild(label);
     });
   }
 }
