@@ -42,6 +42,15 @@
         "doc",
         "review"
       ]
+    },
+    {
+      "login": "seb1441",
+      "name": "Sebastien",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/23641464?v=4",
+      "profile": "https://github.com/seb1441",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
