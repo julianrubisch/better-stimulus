@@ -1,6 +1,6 @@
 # Better StimulusJS
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## An opinionated collection of [StimulusJS](https://stimulusjs.org/) best practices 
@@ -61,6 +61,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/leastbad"><img src="https://avatars2.githubusercontent.com/u/38150464?v=4" width="100px;" alt=""/><br /><sub><b>leastbad</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/pulls?q=is%3Apr+reviewed-by%3Aleastbad" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/julianrubisch/better-stimulus/commits?author=leastbad" title="Documentation">📖</a></td>
     <td align="center"><a href="https://twitter.com/@hopsoft"><img src="https://avatars2.githubusercontent.com/u/32920?v=4" width="100px;" alt=""/><br /><sub><b>Nate Hopkins</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/pulls?q=is%3Apr+reviewed-by%3Ahopsoft" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://gorails.com"><img src="https://avatars1.githubusercontent.com/u/67093?v=4" width="100px;" alt=""/><br /><sub><b>Chris Oliver</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=excid3" title="Documentation">📖</a> <a href="https://github.com/julianrubisch/better-stimulus/pulls?q=is%3Apr+reviewed-by%3Aexcid3" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/seb1441"><img src="https://avatars1.githubusercontent.com/u/23641464?v=4" width="100px;" alt=""/><br /><sub><b>Sebastien</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=seb1441" title="Documentation">📖</a></td>
   </tr>
 </table>
 
