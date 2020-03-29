@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/julianrubisch/better-stimulus#readme",
   "dependencies": {
-    "@hopsoft/controllers": "0.0.8",
+    "@hopsoft/controllers": "0.0.11",
     "parcel-bundler": "^1.12.4",
     "stimulus": "^1.1.1"
   },
