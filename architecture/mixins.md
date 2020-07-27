@@ -86,7 +86,7 @@ export default class extends OverlayController {
   //...
 }
 ```
-{: .border-red}
+{: .border-green}
 
 ### Rationale
 Stimulus controllers are meant to be used as mixins themselves (i.e. applying multiple controllers to one DOM element, thus mixing in behavior). Sometimes though, it might even be advisable to share behavior on the controller level. [Inheritance](./inheritance.md) isn't always the answer to this - more often than not, it leads to architectural issues down the road, e.g. when you discover that you need to inherit behavior from two different parents - which is impossible in JavaScript. Often, it's preferable to mix in behavior that can be used across controllers with a simple trick.
