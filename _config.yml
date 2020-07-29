@@ -24,7 +24,7 @@ sass:
 relative_links:
   enabled:     true
   collections: true
-ga_tracking: UA-159938381-1
+# ga_tracking: UA-159938381-1
 pwa:
   dest_js_directory: assets/js
   enabled: true
