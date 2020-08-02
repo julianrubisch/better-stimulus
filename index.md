@@ -5,38 +5,14 @@ nav_order: 1
 
 # Better StimulusJS
 
-## An opinionated collection of [StimulusJS](https://stimulusjs.org/) best practices 
+## An Opinionated Collection of [StimulusJS](https://stimulusjs.org/) Best Practices 
 
-## Contributing
+[StimulusJS](https://stimulusjs.org/), the _modest JavaScript framework_ by [Basecamp](https://www.basecamp.com) is gaining widespread traction. It powers Basecamp and [HEY](https://www.hey.com), among others, and is a natural choice for Rails developers. That said, it fits any codebase that embraces server-side generated HTML and lightweight JS sprinkles.
 
-Contributions are very welcome! Just fork the [repo](https://github.com/julianrubisch/better-stimulus), create a topic branch, and file a pull request!
+Unfortunately, the official docs lack clear guidelines and best practice examples. Thus, this guide tries to present advice for newcomers and intermediate Stimulus programmers.
 
-Below is an example of a section:
+### Who made this?
+This site is maintained by [Julian Rubisch](https://github.com/julianrubisch), [Stimulus Reflex](https://docs.stimulusreflex.com) core team member and senior Rails developer. A range of [enthusiast volunteers](./contributors.md) helps keeping articles up to date and quality-assured. 
 
-~~~markdown
-## Heading
-
-Bad
-{: .label .label-red }
-
-```js
-```
-{: .border-red }
-
-Good
-{: .label .label-green }
-
-```js
-```
-{: .border-green }
-
-### Rationale
-
-### Counterindications
-
-### References
-~~~
-
-## Disagree?
-
-No problem, file a [Github issue](https://github.com/julianrubisch/better-stimulus/issues) and let's talk about it!
+### Disagree or have comments?
+Take a look at [https://github.com/julianrubisch/better-stimulus](https://github.com/julianrubisch/better-stimulus) for ways to contribute and/or discuss content.
