@@ -11,6 +11,24 @@ nav_order: 1
 
 Unfortunately, the official docs lack clear guidelines and best practice examples. Thus, this guide tries to present advice for newcomers and intermediate Stimulus programmers.
 
+Covered topics include:
+
+- [Architecture](./architecture.md)
+  - [Application Controller](./architecture/application-controller.md)
+  - [Configurable Controllers](./architecture/configurable-controllers.md)
+  - [Mixins](./architecture/mixins.md)
+  - [Namespaced Attributes](./architecture/namespaced-attributes.md)
+- [Events](./events.md)
+- [Integrating Libraries](./integrating-libraries.md)
+  - [Use Lifecycle Events for Setup and Teardown](./integrating-libraries/lifecycle.md)
+- [Interaction](./interaction.md)
+  - [Controller DOM Mapper](./interaction/controller-dom-mapper.md)
+- [SOLID](./solid.md)
+  - [Single Responsibility Principle](./solid/single-responsibility.md)
+- [With rails-ujs](./rails-ujs.md)
+  - [Submit a Form Programmatically](./rails-ujs/submit-form.md)
+
+
 ### Who made this?
 This site is maintained by [Julian Rubisch](https://github.com/julianrubisch), [Stimulus Reflex](https://docs.stimulusreflex.com) core team member and senior Rails developer. A range of [enthusiast volunteers](./contributors.md) helps keeping articles up to date and quality-assured. 
 
