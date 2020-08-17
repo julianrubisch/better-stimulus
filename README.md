@@ -3,6 +3,8 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
+For easy reading, [the main website is here](https://www.betterstimulus.com/).
+
 ## An opinionated collection of [StimulusJS](https://stimulusjs.org/) best practices 
 
 ## Contributing
