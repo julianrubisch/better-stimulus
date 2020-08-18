@@ -49,6 +49,14 @@ Good
 {: .label .label-green}
 
 ```js
+
+
+// overlay_controller.js
+import { Controller } from "stimulus";
+
+export default class extends Controller {
+}
+
 // mixins/useOverlay.js
 export const useOverlay = controller => {
   Object.assign(controller, {
