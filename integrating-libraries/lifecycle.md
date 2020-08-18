@@ -15,6 +15,7 @@ Bad
 {: .label .label-red }
 
 ```js
+// initialization code
 import EasyMDE from "easymde"
 
 let editors = [];
@@ -67,6 +68,37 @@ Using Stimulus lifecycle events allows you to make most Javascript libraries com
 Stimulus creates separate instances automatically which also saves you from maintaining an array of active instances that need to be torn down later.
 
 Each instance can pull its own unique configuration from data attributes from the Stimulus controller to make each instance separately configurable.
+
+### Fetching HTML over the wire
+
+Let's consider a situation where you are fetching some HTML asynchronously and are adding it to the DOM. Below is an example of the HTML that you could be fetching:
+
+Bad
+{: .label .label-red }
+
+```html
+<-- we're fetching this via ajax and rendering it in the DOM -->
+       
+<div class="easymde">...</div>
+```
+Because you are fetching this asynchronously without stimulus, the EasyMDE javascript code will not work and initialize - this will only happen after turbolinks loads - and that won't happen again when you fetch the HTML! You will have to re-run the initialisation code:
+
+```js
+// initialization code - you'll have to manually trigger and rerun the below code:
+import EasyMDE from "easymde"
+// etc ....
+```
+
+But, if you wrap the returned HTML using stimulus attributes (see below) then you will not have to re-run the initialization code. You will get that for free!
+
+Good
+{: .label .label-green }
+
+```html
+<div data-controller="easymde" data-target="easymde.field">...</div>
+```
+
+**Summary:** The benefit of using stimulus when sending HTML over the wire (i.e. fetching HTML via AJAX and rendering it on your page) is that you will not need to trigger and re-run any initialization code. You will get that for free, leading to huge improvements in the readability and maintainability of your code.
 
 ### Contraindications
 Not all Javascript libraries have good teardown methods to remove their functionality from the page.
