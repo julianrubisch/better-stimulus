@@ -60,6 +60,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "BKSpurgeon",
+      "name": "Ben Koshy",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/15097447?v=4",
+      "profile": "https://github.com/BKSpurgeon",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
