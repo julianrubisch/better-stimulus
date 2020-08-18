@@ -68,6 +68,8 @@ Stimulus creates separate instances automatically which also saves you from main
 
 Each instance can pull its own unique configuration from data attributes from the Stimulus controller to make each instance separately configurable.
 
+Suppose you are fetching some HTML from a server and rendering it to your page asynchronously. If the HTML you are obtaining requires the initialization of javascript, then you will have to reinitialize that javascript yourself somehow - you will have to rerun the code in the "bad" example given above. This can be cumbersome to trigger. But if the initialization is done in the "good" manner above, then you can automatically reinitialize that javascript **for free** with stimulus without any additional code. Of course course, the html you are returning must be sprinkled with the relevant and correct stimulus js attributes.
+
 ### Contraindications
 Not all Javascript libraries have good teardown methods to remove their functionality from the page.
 
