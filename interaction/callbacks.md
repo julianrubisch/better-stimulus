@@ -1,4 +1,13 @@
-## Using callbacks to communicate between controllers
+---
+title: Use Callbacks to Communicate Between Controllers
+nav_order: 2
+parent: Interaction
+---
+
+# Use Callbacks to Communicate Between Controllers
+
+#### by @geetfun {% avatar geetfun size=24 %}
+{: .fs-3 }
 
 - You want to maintain a set of logic in a single StimulusJS component
 - You need the value from another controller to perform your function

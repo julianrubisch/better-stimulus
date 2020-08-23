@@ -10,3 +10,4 @@ The following people have generously contributed to **betterstimulus**:
 - @julianrubisch
 - @excid3
 - @leastbad
+- @geetfun
