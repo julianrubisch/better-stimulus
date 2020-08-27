@@ -23,6 +23,7 @@ Covered topics include:
   - [Use Lifecycle Events for Setup and Teardown](./integrating-libraries/lifecycle.md)
 - [Interaction](./interaction.md)
   - [Controller DOM Mapper](./interaction/controller-dom-mapper.md)
+  - [Use Callbacks to Communicate Between Controllers](./interaction/callbacks.md)
 - [SOLID](./solid.md)
   - [Single Responsibility Principle](./solid/single-responsibility.md)
 - [With rails-ujs](./rails-ujs.md)
