@@ -1,5 +1,5 @@
 ---
-title: Use <template> to Restore DOM State
+title: Use &lt;template&gt; to Restore DOM State
 nav_order: 1
 parent: DOM Manipulation
 ---
