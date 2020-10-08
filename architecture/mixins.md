@@ -67,7 +67,7 @@ export const useOverlay = controller => {
 // dropdown_controller.js
 import { useOverlay } from "./mixins/useOverlay";
 
-export default class extends OverlayController {
+export default class extends Controller {
   connect() {
     useOverlay(this);
   }
@@ -78,7 +78,7 @@ export default class extends OverlayController {
 // flyout_controller.js
 import { useOverlay } from "./mixins/useOverlay";
 
-export default class extends OverlayController {
+export default class extends Controller {
   connect() {
     useOverlay(this);
   }
