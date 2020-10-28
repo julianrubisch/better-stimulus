@@ -5,7 +5,7 @@ parent: With Turbolinks
 
 # Global Teardown
 
-#### by @leastbad {% avatar leastbad size=24 %}
+#### by @leastbad {% avatar leastbad size=24 %} and @adrienpoly {% avatar adrienpoly size=24 %}
 {: .fs-3 }
 
 ## Pain Point
@@ -30,11 +30,24 @@ document.addEventListener('turbolinks:before-cache', () => {
 ```js
 // app/javascript/controllers/any_controller.js
 export default class extends Controller {
-  // ...
-
+  connect() {
+    // ...
+  }
+  
   teardown() {
-    
+    this.element.classList.remove('play-animation')
   }
 }
 ```
 {: .border-green}
+
+### Rationale
+
+In a Stimulus controller, typically `disconnect` is concerned with teardown code, however, it could be argued that the general lifecycle callbacks should be kept free of any code that's not concerned with the controller and its elements per se. With Turbolinks-related teardown logic getting its own lifecycle method, there's exactly one place where that rollback should happen, and every controller can opt in to this behavior, or not.
+
+### Counterindications
+There's something to say about the necessity of adding another teardown method, when all Stimulus controllers already come with a built-in `disconnect` function. You might not want to duplicate this behavior, probably depending on the intensity of Turbolinks usage in your application, and how Turbolinks-related teardown logic differs from other similar concerns.
+
+
+### References
+- [https://dev.to/adrienpoly/animations-with-turbolinks-and-stimulus-4862](https://dev.to/adrienpoly/animations-with-turbolinks-and-stimulus-4862)
