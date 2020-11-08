@@ -3,6 +3,10 @@ title: Global Error Handler
 parent: Error Handling
 ---
 
+# Global Error Handler
+
+#### by @adrienpoly {% avatar adrienpoly size=24 %}
+
 ```js
 // app/javascript/packs/application.js
 import { Application } from "stimulus"
