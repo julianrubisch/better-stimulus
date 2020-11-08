@@ -71,5 +71,5 @@ export default class extends ApplicationController {
 ### Rationale
 
 ### References
-- [Github issue](https://github.com/stimulusjs/stimulus/issues/236)
+- [Github issue discussing the internals of calling application code from Stimulus](https://github.com/stimulusjs/stimulus/issues/236)
 - [Github PR introducing the error handler](https://github.com/stimulusjs/stimulus/pull/53)
