@@ -6,6 +6,10 @@ parent: Error Handling
 # Global Error Handler
 
 #### by @adrienpoly {% avatar adrienpoly size=24 %}
+{: .fs-3 }
+
+## Pain Point
+You want to catch errors pertaining to Stimulus (`connect` errors, `targets` not being accessible etc.) and send them to an error tracking service of your choice (e.g. Sentry, Honeybadger etc.). 
 
 ```js
 // app/javascript/packs/application.js
@@ -27,6 +31,7 @@ const sentryErrorHandler = (error, message, detail = {}) => {
 
 application.handleError = sentryErrorHandler
 ```
+{: .border-green}
 
 ```js
 // app/javascript/controllers/application_controller.js
@@ -46,6 +51,7 @@ export default class extends ApplicationController {
   }
 }
 ```
+{: .border-green}
 
 ```js
 // app/javascript/controllers/some_controller.js
@@ -60,5 +66,5 @@ export default class extends ApplicationController {
   }
 }
 ```
-```
+{: .border-green}
 
