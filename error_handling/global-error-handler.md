@@ -68,3 +68,8 @@ export default class extends ApplicationController {
 ```
 {: .border-green}
 
+### Rationale
+
+### References
+- [Github issue](https://github.com/stimulusjs/stimulus/issues/236)
+- [Github PR introducing the error handler](https://github.com/stimulusjs/stimulus/pull/53)
