@@ -6,7 +6,6 @@ parent: Error Handling
 # Global Error Handler
 
 #### by @adrienpoly {% avatar adrienpoly size=24 %}
-
 {: .fs-3 }
 
 ## Pain Point
