@@ -19,7 +19,7 @@ First define a [global Application Controller](./architecture/application-contro
 
 Within this ApplicationController define a new `handleError` function. Here this function creates a small context object with the id of the current user (you can pass all context information that can help you debug: environment, subscription status, etc).
 
-Stimulus includes a largely undocumented error handler (see links below). By default, this error handle catches all Stimulus internal errors and output a prettify `console.log`.
+Stimulus includes a largely undocumented error handler (see links below). By default, this error handle catches all Stimulus internal errors and output a prettified `console.log`.
 
 Within our `handleError` function we can call this `application.handleError` with our custom context to have a single function being responsible to manage and report errors.
 
@@ -27,19 +27,23 @@ Within our `handleError` function we can call this `application.handleError` wit
 
 ```js
 // app/javascript/controllers/application_controller.js
-import { Controller } from 'stimulus'
+import { Controller } from "stimulus";
 
 export default class extends ApplicationController {
-  handleError = error => {
+  handleError = (error) => {
     const context = {
       controller: this.identifier,
       user_id: this.userId,
-    }
-    this.application.handleError(error, `Error in controller: ${this.identifier}`, context)
-  }
+    };
+    this.application.handleError(
+      error,
+      `Error in controller: ${this.identifier}`,
+      context
+    );
+  };
 
   get userId() {
-    return this.metaValue('user_id')
+    return this.metaValue("user_id");
   }
 }
 ```
@@ -56,7 +60,7 @@ export default class extends ApplicationController {
     try {
       // ...
     } catch (err) {
-      this.handleError(err)
+      this.handleError(err);
     }
   }
 }
@@ -70,24 +74,24 @@ Here is an example to configure Sentry for reporting Stimulus errors :
 
 ```js
 // app/javascript/packs/application.js
-import { Application } from 'stimulus'
-import { definitionsFromContext } from 'stimulus/webpack-helpers'
+import { Application } from "stimulus";
+import { definitionsFromContext } from "stimulus/webpack-helpers";
 
-const application = Application.start()
-const context = require.context('./controllers', true, /\.js$/)
-application.load(definitionsFromContext(context))
+const application = Application.start();
+const context = require.context("./controllers", true, /\.js$/);
+application.load(definitionsFromContext(context));
 
 // memorize default handler
-const defaultErrorHandler = application.handleError
+const defaultErrorHandler = application.handleError;
 
 // configure Sentry to log errors and prepend the default handler
 const sentryErrorHandler = (error, message, detail = {}) => {
-  defaultErrorHandler(error, message, detail)
-  Sentry.captureException(error, { message, ...detail })
-}
+  defaultErrorHandler(error, message, detail);
+  Sentry.captureException(error, { message, ...detail });
+};
 
 // overwrite the default handler with our new composed handler
-application.handleError = sentryErrorHandler
+application.handleError = sentryErrorHandler;
 ```
 
 This new instrumented handler will now send global errors to Sentry. The example above shows how you can furthermore use this function to catch errors in our own application code in `try/catch` blocks.
