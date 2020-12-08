@@ -8,6 +8,9 @@ parent: Error Handling
 #### by @adrienpoly {% avatar adrienpoly size=24 %}
 {: .fs-3 }
 
+Updated for Stimulus 2
+{: .label .label-purple }
+
 ## Pain Point
 
 You want to catch errors pertaining to Stimulus (`connect` errors, `targets` not being accessible etc.) as well as application errors within your controllers and send them to an error tracking service of your choice (e.g. Sentry, Honeybadger etc.).
