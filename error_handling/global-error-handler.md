@@ -3,13 +3,14 @@ title: Global Error Handler
 parent: Error Handling
 ---
 
+
+Updated for Stimulus 2
+{: .label .label-purple }
+
 # Global Error Handler
 
 #### by @adrienpoly {% avatar adrienpoly size=24 %}
 {: .fs-3 }
-
-Updated for Stimulus 2
-{: .label .label-purple }
 
 ## Pain Point
 
