@@ -81,7 +81,7 @@ const context = require.context("./controllers", true, /\.js$/);
 application.load(definitionsFromContext(context));
 
 // memorize default handler
-const defaultErrorHandler = application.handleError;
+const defaultErrorHandler = application.handleError.bind(application);
 
 // configure Sentry to log errors and prepend the default handler
 const sentryErrorHandler = (error, message, detail = {}) => {
