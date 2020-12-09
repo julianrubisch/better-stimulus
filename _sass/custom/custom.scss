@@ -127,3 +127,41 @@
 //lg: $content-width + $nav-width,
 //xl: 1400px
 //);
+
+#mc_embed_signup {
+  #mc-embedded-subscribe-form {
+    background-color: $grey-lt-000;
+    border: 1px solid $grey-lt-300;
+
+    .indicates-required, .content__gdprLegal {
+      font-size: 14px;
+    }
+
+    div.mc-field-group {
+      align-items: center;
+      
+      label {
+        flex: 0.5;
+      }
+      
+      input:not([type="checkbox"]) {
+        flex: 1.5;
+        border: 1px solid $grey-lt-300;
+        height: 2.5rem;
+      }
+
+    }
+
+    // checkboxes
+    input[type="checkbox"] {
+      height: 1rem;
+      width: 1rem;
+      border: 1px solid $grey-lt-300;
+    }
+  }
+
+  .gdprRequired {
+    background-color: white;
+    border: 1px solid $grey-lt-300;
+  }
+}
