@@ -33,6 +33,7 @@ group :jekyll_plugins do
   gem "jekyll-titles-from-headings"
   gem "jekyll-pwa-plugin", git: "https://github.com/julianrubisch/jekyll-pwa"
   gem "jekyll-turbolinks"
+  gem "jekyll-last-modified-at"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
