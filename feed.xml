@@ -1,0 +1,45 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>{{ site.title }}</title>
+	<subtitle>{{ site.description }}</subtitle>
+	<link href="{{ site.url }}/feed.xml" rel="self" />
+	<link href="{{ site.url }}" rel="alternate" type="text/html" />
+	<id>{{ page.url | absolute_url | xml_escape }}</id>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	
+	
+  {% for page in site.pages %}
+    {% unless page.name contains ".css" or page.name contains ".scss" or page.name contains ".js" or page.name contains ".txt" or page.name contains ".xml" or page.title contains "Thank You" or page.title contains "Contributors" %}
+    {% assign page_title = page.title | smartify | strip_html | normalize_whitespace | xml_escape %}
+    <entry>
+      <title>{{ page_title }}</title>
+      <link href="{{ page.url | absolute_url }}" rel="alternate" type="text/html" title="{{ page_title }}" />
+      <published>{{ page.date | date_to_xmlschema }}</published>
+      <updated>{{ page.last_modified_at | default: page.date | date_to_xmlschema }}</updated>
+      <id>{{ page.url | absolute_url | xml_escape }}</id>
+      <content type="html" xml:base="{{ page.url | absolute_url | xml_escape }}">{{ page.content | strip | markdownify | xml_escape }}</content>
+
+      {% assign page_author = page.author | default: page.authors[0] | default: site.author %}
+      {% assign page_author = site.data.authors[page_author] | default: page_author %}
+      {% assign page_author_email = page_author.email | default: nil %}
+      {% assign page_author_uri = page_author.uri | default: nil %}
+      {% assign page_author_name = page_author.name | default: page_author %}
+
+      <author>
+        <name>{{ page_author_name | default: "" | xml_escape }}</name>
+        {% if page_author_email %}
+        <email>{{ page_author_email | xml_escape }}</email>
+        {% endif %}
+        {% if page_author_uri %}
+        <uri>{{ page_author_uri | xml_escape }}</uri>
+        {% endif %}
+      </author>
+    </entry>
+    {% endunless %}
+  {% endfor %}
+</feed>

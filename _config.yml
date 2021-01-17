@@ -1,6 +1,6 @@
 title: "Better StimulusJS"
 theme: just-the-docs
-# url: "https://www.betterstimulus.com"
+url: "https://www.betterstimulus.com"
 aux_links:
   "Github":
     - "//github.com/julianrubisch/better-stimulus"
@@ -10,7 +10,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-mentions
   - jekyll-avatar
-  - jekyll-feed
+  # - jekyll-feed
   - jekyll-default-layout
   - jekyll-gist
   - jekyll-github-metadata
@@ -19,6 +19,7 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-pwa-plugin
   - jekyll-turbolinks
+  - jekyll-last-modified-at
 sass:
   style: compressed
 relative_links:
