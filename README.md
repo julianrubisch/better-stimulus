@@ -1,6 +1,6 @@
 # Better StimulusJS
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 For easy reading, [the main website is here](https://www.betterstimulus.com/).
@@ -59,21 +59,23 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://www.julianrubisch.at"><img src="https://avatars0.githubusercontent.com/u/4352208?v=4" width="100px;" alt=""/><br /><sub><b>Julian Rubisch</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=julianrubisch" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/leastbad"><img src="https://avatars2.githubusercontent.com/u/38150464?v=4" width="100px;" alt=""/><br /><sub><b>leastbad</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/pulls?q=is%3Apr+reviewed-by%3Aleastbad" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/julianrubisch/better-stimulus/commits?author=leastbad" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://twitter.com/@hopsoft"><img src="https://avatars2.githubusercontent.com/u/32920?v=4" width="100px;" alt=""/><br /><sub><b>Nate Hopkins</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/pulls?q=is%3Apr+reviewed-by%3Ahopsoft" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="http://gorails.com"><img src="https://avatars1.githubusercontent.com/u/67093?v=4" width="100px;" alt=""/><br /><sub><b>Chris Oliver</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=excid3" title="Documentation">📖</a> <a href="https://github.com/julianrubisch/better-stimulus/pulls?q=is%3Apr+reviewed-by%3Aexcid3" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://github.com/seb1441"><img src="https://avatars1.githubusercontent.com/u/23641464?v=4" width="100px;" alt=""/><br /><sub><b>Sebastien</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=seb1441" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://domchristie.co.uk"><img src="https://avatars0.githubusercontent.com/u/111734?v=4" width="100px;" alt=""/><br /><sub><b>Dom Christie</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/issues?q=author%3Adomchristie" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/BKSpurgeon"><img src="https://avatars2.githubusercontent.com/u/15097447?v=4" width="100px;" alt=""/><br /><sub><b>Ben Koshy</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=BKSpurgeon" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.julianrubisch.at"><img src="https://avatars0.githubusercontent.com/u/4352208?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Julian Rubisch</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=julianrubisch" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/leastbad"><img src="https://avatars2.githubusercontent.com/u/38150464?v=4?s=100" width="100px;" alt=""/><br /><sub><b>leastbad</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/pulls?q=is%3Apr+reviewed-by%3Aleastbad" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/julianrubisch/better-stimulus/commits?author=leastbad" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://twitter.com/@hopsoft"><img src="https://avatars2.githubusercontent.com/u/32920?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nate Hopkins</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/pulls?q=is%3Apr+reviewed-by%3Ahopsoft" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="http://gorails.com"><img src="https://avatars1.githubusercontent.com/u/67093?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chris Oliver</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=excid3" title="Documentation">📖</a> <a href="https://github.com/julianrubisch/better-stimulus/pulls?q=is%3Apr+reviewed-by%3Aexcid3" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/seb1441"><img src="https://avatars1.githubusercontent.com/u/23641464?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sebastien</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=seb1441" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://domchristie.co.uk"><img src="https://avatars0.githubusercontent.com/u/111734?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dom Christie</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/issues?q=author%3Adomchristie" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/BKSpurgeon"><img src="https://avatars2.githubusercontent.com/u/15097447?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ben Koshy</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=BKSpurgeon" title="Documentation">📖</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://eager.app"><img src="https://avatars3.githubusercontent.com/u/16937?v=4" width="100px;" alt=""/><br /><sub><b>geetfun</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=geetfun" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://eager.app"><img src="https://avatars3.githubusercontent.com/u/16937?v=4?s=100" width="100px;" alt=""/><br /><sub><b>geetfun</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=geetfun" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://Konnor.site"><img src="https://avatars.githubusercontent.com/u/26425882?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Konnor Rogers</b></sub></a><br /><a href="https://github.com/julianrubisch/better-stimulus/commits?author=ParamagicDev" title="Documentation">📖</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
