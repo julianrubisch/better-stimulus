@@ -53,11 +53,11 @@ Bad
 
 ```js
 connect() {
-  document.addEventListener("click", this.boundFindFoo)
+  document.addEventListener("click", this.findFoo.bind(this))
 }
 
 disconnect() {
-  document.removeEventListener("click", this.boundFindFoo)
+  document.removeEventListener("click", this.findFoo.bind(this))
 }
 
 findFoo() {
