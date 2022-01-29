@@ -10,7 +10,7 @@ parent: With rails-ujs
 
 
 ```html
-<div controller="remote-form">
+<div data-controller="remote-form">
   <%= form_with(model: @article, html: { data: { action: "ajax:success->remote-form#onPostSuccess" } }) do |f| %>
     <%= select_tag "author", options_from_collection_for_select(@people, "id", "name"),
                    data: { action: "change->remote-form#update" } %>
