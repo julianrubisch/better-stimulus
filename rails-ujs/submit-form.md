@@ -10,12 +10,17 @@ parent: With rails-ujs
 
 
 ```html
-<div data-controller="remote-form">
-  <%= form_with(model: @article, html: { data: { action: "ajax:success->remote-form#onPostSuccess" } }) do |f| %>
-    <%= select_tag "author", options_from_collection_for_select(@people, "id", "name"),
-                   data: { action: "change->remote-form#update" } %>
-  <% end %>
-</div>
+<%= form_with(model: @author,
+              local: false,
+              html: { data: { controller: "remote-form",
+                              action: "ajax:success->remote-form#onPostSuccess"}
+                    }
+             ) do |f|
+%>
+  <%= select_tag "count",
+                 options_for_select([1, 2, 3], 2),
+                 data: { action: "change->remote-form#update" } %>
+<% end %>
 ```
 
 Won't Work
