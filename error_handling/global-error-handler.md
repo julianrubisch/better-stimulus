@@ -18,7 +18,7 @@ You want to catch errors pertaining to Stimulus (`connect` errors, `targets` not
 
 ## Solution
 
-First define a [global Application Controller](./architecture/application-controller.md) that your Stimulus controllers will inherit from.
+First define a [global Application Controller](../architecture/application-controller.md) that your Stimulus controllers will inherit from.
 
 Within this ApplicationController define a new `handleError` function. Here this function creates a small context object with the id of the current user (you can pass all context information that can help you debug: environment, subscription status, etc).
 
