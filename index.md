@@ -5,7 +5,7 @@ nav_order: 1
 
 # Better StimulusJS
 
-## An Opinionated Collection of [StimulusJS](https://stimulusjs.org/) Best Practices 
+## An Opinionated Collection of [StimulusJS](https://stimulusjs.org/) Best Practices
 
 [StimulusJS](https://stimulusjs.org/), the _modest JavaScript framework_ by [Basecamp](https://www.basecamp.com) is gaining widespread traction. It powers Basecamp and [HEY](https://www.hey.com), among others, and is a natural choice for Rails developers. That said, it fits any codebase that embraces server-side generated HTML and lightweight JS sprinkles.
 
@@ -18,6 +18,10 @@ Covered topics include:
   - [Configurable Controllers](./architecture/configurable-controllers.md)
   - [Mixins](./architecture/mixins.md)
   - [Namespaced Attributes](./architecture/namespaced-attributes.md)
+- [DOM manipulation](./dom_manipulation.md)
+  - [Use `<template>` to Restore DOM State](./dom_manipulation/template.md)
+- [Error Handling](./error_handling.md)
+  - [Global Error Handler](./error_handling/global-error-handler.md)
 - [Events](./events.md)
 - [Integrating Libraries](./integrating-libraries.md)
   - [Use Lifecycle Events for Setup and Teardown](./integrating-libraries/lifecycle.md)
@@ -29,11 +33,11 @@ Covered topics include:
 - [With rails-ujs](./rails-ujs.md)
   - [Submit a Form Programmatically](./rails-ujs/submit-form.md)
 - [With Turbolinks](./turbolinks.md)
-  - [Global Teardown](./turbolinks/teardown.md)  
-  
+  - [Global Teardown](./turbolinks/teardown.md)
+
 ### Stay Informed
 
-Get updates when new articles are posted: 
+Get updates when new articles are posted:
 
 <!-- Begin Mailchimp Signup Form -->
 <div id="mc_embed_signup">
@@ -72,7 +76,7 @@ Get updates when new articles are posted:
 
 
 ### Who made this?
-This site is maintained by [Julian Rubisch](https://github.com/julianrubisch), [Stimulus Reflex](https://docs.stimulusreflex.com) core team member and senior Rails developer. A range of [enthusiast volunteers](./contributors.md) helps keeping articles up to date and quality-assured. 
+This site is maintained by [Julian Rubisch](https://github.com/julianrubisch), [Stimulus Reflex](https://docs.stimulusreflex.com) core team member and senior Rails developer. A range of [enthusiast volunteers](./contributors.md) helps keeping articles up to date and quality-assured.
 
 ### Other Useful Resources
 BetterStimulus is accompanied by
