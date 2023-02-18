@@ -94,7 +94,7 @@ add and remove eventListeners are calling different references of the function a
 Make sure that when adding and removing event listeners you use the same bound function reference.
 
 ### Reference
-- [https://stimulusjs.org/reference/actions](https://stimulusjs.org/reference/actions)
+- [https://stimulus.hotwired.dev/reference/actions](https://stimulus.hotwired.dev/reference/actions)
 - [Stimulus EventListener on Github](https://github.com/stimulusjs/stimulus/blob/master/packages/@stimulus/core/src/event_listener.ts)
 - [Stimulus Dispatcher on Github](https://github.com/stimulusjs/stimulus/blob/master/packages/@stimulus/core/src/dispatcher.ts)
 - [Function Bind - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)

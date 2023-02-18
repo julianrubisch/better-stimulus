@@ -5,7 +5,7 @@
 
 For easy reading, [the main website is here](https://www.betterstimulus.com/).
 
-## An opinionated collection of [StimulusJS](https://stimulusjs.org/) best practices 
+## An opinionated collection of [StimulusJS](https://stimulus.hotwired.dev/) best practices 
 
 ## Contributing
 
