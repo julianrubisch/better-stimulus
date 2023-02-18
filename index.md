@@ -32,8 +32,8 @@ Covered topics include:
   - [Single Responsibility Principle](./solid/single-responsibility.md)
 - [With rails-ujs](./rails-ujs.md)
   - [Submit a Form Programmatically](./rails-ujs/submit-form.md)
-- [With Turbolinks](./turbolinks.md)
-  - [Global Teardown](./turbolinks/teardown.md)
+- [With Turbo](./turbo.md)
+  - [Global Teardown](./turbo/teardown.md)
 
 ### Stay Informed
 

@@ -11,7 +11,7 @@ parent: DOM Manipulation
 
 ## Pain Point
 - You're dealing with an external library that yanks HTML off your page and you need to restore it.
-- You want to restore the page to a known state before leaving, e.g. to prepare for Turbolinks caching.
+- You want to restore the page to a known state before leaving, e.g. to prepare for Turbo caching.
 
 Good
 {: .label .label-green }
@@ -65,7 +65,7 @@ export default class extends Controller {
 ### Rationale
 In some cases, it can be necessary to reset your DOM to a known state before leaving the page, or after triggering some action. One use case might be when dealing with external UI libraries like SemanticUI or Bootstrap that will yank away some HTML after, for example, closing a modal.
 
-Furthermore this can be useful when using Turbolinks, because it will cache the current state before navigating away and show it as a preview when doing a restoration visit.
+Furthermore this can be useful when using Turbo, because it will cache the current state before navigating away and show it as a preview when doing a restoration visit.
 
 ### Counterindications
 Certainly there are easier ways to restore markup when manipulating the DOM, especially when you're dealing only with single elements on which you toggle CSS classes. Whenever you need to replace larger portions of HTML, this can be a viable option, though.

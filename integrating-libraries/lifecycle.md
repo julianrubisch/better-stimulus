@@ -9,7 +9,7 @@ parent: Integrating Libraries
 #### by @excid3 {% avatar excid3 size=24 %}
 {: .fs-3 }
 
-## Lifecycle events provide the perfect mechanism to make third-party Javascript libraries compatible with Turbolinks
+## Lifecycle events provide the perfect mechanism to make third-party Javascript libraries compatible with Turbo
 
 Bad
 {: .label .label-red }
@@ -19,14 +19,14 @@ import EasyMDE from "easymde"
 
 let editors = [];
 
-document.addEventListener("turbolinks:load", function() {
+document.addEventListener("turbo:load", function() {
   document.querySelectorAll(".easymde").forEach(function(element) {
     let editor = new EasyMDE({ element })
     editors.push(editor)
   })
 });
 
-document.addEventListener("turbolinks:before-cache", function() {
+document.addEventListener("turbo:before-cache", function() {
   editors.forEach(function(editor) {
     editor.toTextArea()
   }
@@ -62,7 +62,7 @@ export default class extends Controller {
 {: .border-green }
 
 ### Rationale
-Using Stimulus lifecycle events allows you to make most Javascript libraries compatible with Turbolinks without additional effort. You can use the `connect` lifecycle event to setup the instance and the `disconnect` event to teardown.
+Using Stimulus lifecycle events allows you to make most Javascript libraries compatible with Turbo without additional effort. You can use the `connect` lifecycle event to setup the instance and the `disconnect` event to teardown.
 
 Stimulus creates separate instances automatically which also saves you from maintaining an array of active instances that need to be torn down later.
 
