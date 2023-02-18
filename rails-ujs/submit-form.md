@@ -22,7 +22,7 @@ Won't Work
 {: .label .label-red }
 
 ```js
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   onPostSuccess(event) {
@@ -41,7 +41,7 @@ Works
 
 ```js
 import Rails from "@rails/ujs";
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   onPostSuccess(event) {

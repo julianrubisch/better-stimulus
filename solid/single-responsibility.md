@@ -27,7 +27,7 @@ Bad
 
 ```js
 // page_controller.js
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   static targets = ["modal", "form"];
@@ -57,7 +57,7 @@ Good
 
 ```js
 // modal_controller.js
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   open() {
@@ -69,7 +69,7 @@ export default class extends Controller {
 
 ```js
 // form_controller.js
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   submit() {

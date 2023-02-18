@@ -22,7 +22,7 @@ Bad
 
 ```js
 // toggle_controller.js
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   toggle(e) {
@@ -46,7 +46,7 @@ Good
 
 ```js
 // toggle_controller.js
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   toggle(e) {

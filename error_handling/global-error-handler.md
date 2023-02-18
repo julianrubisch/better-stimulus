@@ -30,7 +30,7 @@ Within our `handleError` function we can call this `application.handleError` wit
 
 ```js
 // app/javascript/controllers/application_controller.js
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends ApplicationController {
   handleError = (error) => {
@@ -77,7 +77,7 @@ Here is an example to configure Sentry for reporting Stimulus errors :
 
 ```js
 // app/javascript/packs/application.js
-import { Application } from "stimulus";
+import { Application } from "@hotwired/stimulus";
 import { definitionsFromContext } from "stimulus/webpack-helpers";
 
 const application = Application.start();
