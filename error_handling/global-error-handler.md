@@ -105,5 +105,5 @@ The rationale behind all this, is to have a single error handler for all errors 
 
 ### References
 
-- [Github issue discussing the internals of calling application code from Stimulus](https://github.com/stimulusjs/stimulus/issues/236)
-- [Github PR introducing the error handler](https://github.com/stimulusjs/stimulus/pull/53)
+- [GitHub issue discussing the internals of calling application code from Stimulus](https://github.com/stimulusjs/stimulus/issues/236)
+- [GitHub PR introducing the error handler](https://github.com/stimulusjs/stimulus/pull/53)

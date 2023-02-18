@@ -48,7 +48,7 @@ bundle exec jekyll serve
 
 ## Disagree?
 
-No problem, file a [Github issue](https://github.com/julianrubisch/better-stimulus/issues) and let's talk about it!
+No problem, file a [GitHub issue](https://github.com/julianrubisch/better-stimulus/issues) and let's talk about it!
 
 ## Contributors ✨
 

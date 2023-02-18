@@ -2,7 +2,7 @@ title: "Better StimulusJS"
 theme: just-the-docs
 url: "https://www.betterstimulus.com"
 aux_links:
-  "Github":
+  "GitHub":
     - "//github.com/julianrubisch/better-stimulus"
 repository: "julianrubisch/better-stimulus"
 plugins:
