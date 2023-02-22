@@ -30,7 +30,7 @@ Within our `handleError` function we can call this `application.handleError` wit
 
 ```js
 // app/javascript/controllers/application_controller.js
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends ApplicationController {
   handleError = (error) => {
@@ -77,7 +77,7 @@ Here is an example to configure Sentry for reporting Stimulus errors :
 
 ```js
 // app/javascript/packs/application.js
-import { Application } from "stimulus";
+import { Application } from "@hotwired/stimulus";
 import { definitionsFromContext } from "stimulus/webpack-helpers";
 
 const application = Application.start();
@@ -105,5 +105,5 @@ The rationale behind all this, is to have a single error handler for all errors 
 
 ### References
 
-- [Github issue discussing the internals of calling application code from Stimulus](https://github.com/stimulusjs/stimulus/issues/236)
-- [Github PR introducing the error handler](https://github.com/stimulusjs/stimulus/pull/53)
+- [GitHub issue discussing the internals of calling application code from Stimulus](https://github.com/stimulusjs/stimulus/issues/236)
+- [GitHub PR introducing the error handler](https://github.com/stimulusjs/stimulus/pull/53)

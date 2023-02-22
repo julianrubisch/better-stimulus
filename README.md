@@ -5,7 +5,7 @@
 
 For easy reading, [the main website is here](https://www.betterstimulus.com/).
 
-## An opinionated collection of [StimulusJS](https://stimulusjs.org/) best practices 
+## An opinionated collection of [StimulusJS](https://stimulus.hotwired.dev/) best practices 
 
 ## Contributing
 
@@ -48,7 +48,7 @@ bundle exec jekyll serve
 
 ## Disagree?
 
-No problem, file a [Github issue](https://github.com/julianrubisch/better-stimulus/issues) and let's talk about it!
+No problem, file a [GitHub issue](https://github.com/julianrubisch/better-stimulus/issues) and let's talk about it!
 
 ## Contributors ✨
 

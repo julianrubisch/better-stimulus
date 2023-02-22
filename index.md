@@ -5,9 +5,9 @@ nav_order: 1
 
 # Better StimulusJS
 
-## An Opinionated Collection of [StimulusJS](https://stimulusjs.org/) Best Practices
+## An Opinionated Collection of [StimulusJS](https://stimulus.hotwired.dev/) Best Practices
 
-[StimulusJS](https://stimulusjs.org/), the _modest JavaScript framework_ by [Basecamp](https://www.basecamp.com) is gaining widespread traction. It powers Basecamp and [HEY](https://www.hey.com), among others, and is a natural choice for Rails developers. That said, it fits any codebase that embraces server-side generated HTML and lightweight JS sprinkles.
+[StimulusJS](https://stimulus.hotwired.dev/), the _modest JavaScript framework_ by [Basecamp](https://www.basecamp.com) is gaining widespread traction. It powers Basecamp and [HEY](https://www.hey.com), among others, and is a natural choice for Rails developers. That said, it fits any codebase that embraces server-side generated HTML and lightweight JS sprinkles.
 
 Unfortunately, the official docs lack clear guidelines and best practice examples. Thus, this guide tries to present advice for newcomers and intermediate Stimulus programmers.
 
@@ -32,8 +32,8 @@ Covered topics include:
   - [Single Responsibility Principle](./solid/single-responsibility.md)
 - [With rails-ujs](./rails-ujs.md)
   - [Submit a Form Programmatically](./rails-ujs/submit-form.md)
-- [With Turbolinks](./turbolinks.md)
-  - [Global Teardown](./turbolinks/teardown.md)
+- [With Turbo](./turbo.md)
+  - [Global Teardown](./turbo/teardown.md)
 
 ### Stay Informed
 
