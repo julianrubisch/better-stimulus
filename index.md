@@ -3,6 +3,11 @@ title: Home
 nav_order: 1
 ---
 
+{: .important-title }
+> News
+>
+> Check out my new Patron community, [The Hotwire Club](https://patreon.com/TheHotwireClub)
+
 # Better StimulusJS
 
 ## An Opinionated Collection of [StimulusJS](https://stimulus.hotwired.dev/) Best Practices
@@ -77,11 +82,6 @@ Get updates when new articles are posted:
 
 ### Who made this?
 This site is maintained by [Julian Rubisch](https://github.com/julianrubisch), [Stimulus Reflex](https://docs.stimulusreflex.com) core team member and senior Rails developer. A range of [enthusiast volunteers](./contributors.md) helps keeping articles up to date and quality-assured.
-
-### Other Useful Resources
-BetterStimulus is accompanied by
-
-- [Stimulus Toolbox](https://stimulustoolbox.com/) - a searchable, curated repository of useful Stimulus controllers, articles etc. (by @hopsoft)
 
 ### Disagree or have comments?
 Take a look at [https://github.com/julianrubisch/better-stimulus](https://github.com/julianrubisch/better-stimulus) for ways to contribute and/or discuss content.
