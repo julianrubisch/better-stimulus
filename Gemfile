@@ -67,3 +67,5 @@ group :test do
 end
 
 gem "litestack", "~> 0.4.3"
+
+gem "litestream", "~> 0.10.1"
