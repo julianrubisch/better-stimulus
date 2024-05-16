@@ -77,3 +77,5 @@ gem "importmap-rails", "~> 2.0"
 gem "markdown-rails", "~> 2.1"
 
 gem "rouge", "~> 4.2"
+
+gem "sitemap_generator", "~> 6.3"

@@ -257,6 +257,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sitemap_generator (6.3.0)
+      builder (~> 3.0)
     sitepress-core (4.0.2)
       mime-types (>= 2.99)
     sitepress-rails (4.0.2)
@@ -329,6 +331,7 @@ DEPENDENCIES
   redis (>= 4.0.1)
   rouge (~> 4.2)
   selenium-webdriver
+  sitemap_generator (~> 6.3)
   sitepress-rails (~> 4.0)
   sqlite3 (~> 1.4)
   stimulus-rails
