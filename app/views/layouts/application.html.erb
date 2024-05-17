@@ -11,6 +11,35 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="container">
+      <nav>
+        <ul>
+          <li><h4>Better Stimulus JS</h4></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <aside>
+        <nav>
+          Categories
+          <ul>
+            <li><a href="#">Architecture</a></li>
+            <li>etc</li>
+          </ul>
+        </nav>
+      </aside>
+      <article>
+        <nav aria-label="breadcrumb">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li>Design</li>
+            </ul>
+        </nav>
+        <%= yield %>
+      </article>
+      <aside>
+      </aside>
+    </main>
   </body>
 </html>

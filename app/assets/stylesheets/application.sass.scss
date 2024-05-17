@@ -1,1 +1,27 @@
 // Entry point for your Sass build
+
+@use "@picocss/pico/scss/pico" with (
+  $theme-color: "pumpkin"
+);
+
+@use "@picocss/pico/scss/colors" as *;
+
+pre {
+  background: #282828;
+  padding: 1rem;
+}
+
+article {
+  // reset "article" default style
+  --pico-card-box-shadow: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+}
