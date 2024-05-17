@@ -6,6 +6,23 @@
 
 @use "@picocss/pico/scss/colors" as *;
 
+[data-theme="light"], :root:not([data-theme="dark"]) {
+  --pico-secondary: #{$sand-550};
+  --pico-secondary-hover: #{$sand-700};
+  --pico-secondary-hover-background: #{$sand-700};
+  --pico-muted-color: #{$sand-550};
+}
+
+main {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+  grid-template-rows: 1fr;
+  grid-column-gap: 4rem;
+  grid-row-gap: 2rem;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
 pre {
   background: #282828;
   padding: 1rem;
@@ -14,14 +31,26 @@ pre {
 article {
   // reset "article" default style
   --pico-card-box-shadow: none;
+  padding-top: 0;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 20% 1fr 20%;
-  grid-template-rows: 1fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  justify-items: stretch;
-  align-items: stretch;
+aside.category-subnav {
+  ul {
+    margin: 0;
+    li {
+      padding: 0;
+
+      a {
+        padding: 0;
+        padding-left: calc(var(--pico-nav-element-spacing-horizontal)* 1.5);
+        margin: 0;
+        border-left: 1px solid #{$sand-200};
+        border-radius: 0;
+
+        &.active {
+          border-left: 1px solid #{$sand-550};
+        }
+      }
+    } 
+  }
 }

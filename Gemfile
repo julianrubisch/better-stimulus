@@ -79,3 +79,5 @@ gem "markdown-rails", "~> 2.1"
 gem "rouge", "~> 4.2"
 
 gem "sitemap_generator", "~> 6.3"
+
+gem "active_hash", "~> 3.3"
