@@ -6,6 +6,14 @@
 
 @use "@picocss/pico/scss/colors" as *;
 
+@import url("./fonts.css");
+
+:root {
+  --pico-font-family-sans-serif: "Roboto", system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
+  letter-spacing: -0.1px;
+  --pico-font-weight: 300;
+}
+
 [data-theme="light"], :root:not([data-theme="dark"]) {
   --pico-secondary: #{$sand-550};
   --pico-secondary-hover: #{$sand-700};
