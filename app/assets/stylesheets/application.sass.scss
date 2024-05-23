@@ -1,5 +1,4 @@
 // Entry point for your Sass build
-
 @use "@picocss/pico/scss/pico" with (
   $theme-color: "pumpkin"
 );
@@ -34,6 +33,12 @@ main {
 pre {
   background: #282828;
   padding: 1rem;
+  line-height: 1.7;
+}
+
+nav[aria-label="breadcrumb"] {
+  padding-left: var(--pico-block-spacing-vertical);
+  --pico-nav-breadcrumb-divider: '|';
 }
 
 article {
