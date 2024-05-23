@@ -81,3 +81,5 @@ gem "rouge", "~> 4.2"
 gem "sitemap_generator", "~> 6.3"
 
 gem "active_hash", "~> 3.3"
+
+gem "heroicon", "~> 1.0"
