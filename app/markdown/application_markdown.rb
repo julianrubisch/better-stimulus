@@ -9,6 +9,8 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
   # Run `bundle add rouge` and uncomment the include below for syntax highlighting
   include MarkdownRails::Helper::Rouge
 
+  FORMATTER = Rouge::Formatters::HTMLInline.new("base16.dark")
+
   # If you need access to ActionController::Base.helpers, you can delegate by uncommenting
   # and adding to the list below. Several are already included for you in the `MarkdownRails::Renderer::Rails`,
   # but you can add more here.
@@ -36,6 +38,13 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
       youtube_tag url, alt
     else
       super
+    end
+  end
+
+  def block_code(code, language)
+    lexer = Rouge::Lexer.find(language)
+    content_tag :pre, class: language do
+      raw FORMATTER.format(lexer.lex(code))
     end
   end
 
