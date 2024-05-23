@@ -23,6 +23,8 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
   #   :turbo_frame_tag,
   # to: :helpers
 
+  delegate :heroicon, to: :helpers
+
   # These flags control features in the Redcarpet renderer, which you can read
   # about at https://github.com/vmg/redcarpet#and-its-like-really-simple-to-use
   # Make sure you know what you're doing if you're using this to render user inputs.
@@ -43,21 +45,27 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
 
   def block_code(code, language)
     lexer = Rouge::Lexer.find(language)
-    content_tag :pre, class: language do
-      raw FORMATTER.format(lexer.lex(code))
+    content_tag :div, data: {controller: "clipboard", clipboard_success_content_value: "Copied!"}, class: "code-block-wrapper" do
+      (tag.button class: "code-clipboard-button", data: {action: "clipboard#copy", clipboard_target: "button", title: "Copy to clipboard"} do
+        heroicon "clipboard-document-check"
+       end) + (tag.div class: "hidden", data: {clipboard_target: "source"} do
+                 code
+               end) + (tag.pre class: language do
+        raw FORMATTER.format(lexer.lex(code))
+      end)
     end
   end
 
   private
-    # This is provided as an example; there's many more YouTube URLs that this wouldn't catch.
-    def youtube_tag(url, alt)
-      embed_url = "https://www.youtube-nocookie.com/embed/#{CGI.parse(url.query).fetch("v").first}"
-      content_tag :iframe,
-        src: embed_url,
-        width: 560,
-        height: 325,
-        allow: "encrypted-media; picture-in-picture",
-        allowfullscreen: true \
-          do alt end
-    end
+  # This is provided as an example; there's many more YouTube URLs that this wouldn't catch.
+  def youtube_tag(url, alt)
+    embed_url = "https://www.youtube-nocookie.com/embed/#{CGI.parse(url.query).fetch("v").first}"
+    content_tag :iframe,
+                src: embed_url,
+                width: 560,
+                height: 325,
+                allow: "encrypted-media; picture-in-picture",
+                allowfullscreen: true \
+    do alt end
+  end
 end
