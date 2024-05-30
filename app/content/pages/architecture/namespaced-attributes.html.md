@@ -5,8 +5,8 @@ category: architecture
 
 # Namespaced Attributes
 
-#### by @leastbad {% avatar leastbad size=24 %}
-{: .fs-3 }
+<!-- #### by @leastbad {% avatar leastbad size=24 %} -->
+<!-- {: .fs-3 } -->
 
 Good
 {: .label .label-green}

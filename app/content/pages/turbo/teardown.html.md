@@ -5,10 +5,10 @@ category: turbo
 
 # Global Teardown
 
-#### by @leastbad {% avatar leastbad size=24 %} and @adrienpoly {% avatar adrienpoly size=24 %}
-{: .fs-3 }
+<!-- #### by @leastbad {% avatar leastbad size=24 %} and @adrienpoly {% avatar adrienpoly size=24 %} -->
+<!-- {: .fs-3 } -->
 
-## Pain Point
+### Pain Point
 Turbo caches a page's state before navigating away. If you access the page again, it first displays the cached version as a preview, then refreshes the content.
 
 Any transitional changes to the state before caching will thus lead to a flash of manipulated content.

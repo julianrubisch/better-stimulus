@@ -5,10 +5,10 @@ category: dom_manipulation
 
 # Use `<template>` to Restore DOM State
 
-#### by @julianrubisch {% avatar julianrubisch size=24 %}
-{: .fs-3 }
+<!-- #### by @julianrubisch {% avatar julianrubisch size=24 %} -->
+<!-- {: .fs-3 } -->
 
-## Pain Point
+### Pain Point
 - You're dealing with an external library that yanks HTML off your page and you need to restore it.
 - You want to restore the page to a known state before leaving, e.g. to prepare for Turbo caching.
 

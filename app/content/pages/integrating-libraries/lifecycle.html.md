@@ -3,8 +3,8 @@ title: Use Lifecycle Events for Setup and Teardown
 category: integrating-libraries
 ---
 
-#### by @excid3 {% avatar excid3 size=24 %}
-{: .fs-3 }
+<!-- #### by @excid3 {% avatar excid3 size=24 %} -->
+<!-- {: .fs-3 } -->
 
 ## Lifecycle events provide the perfect mechanism to make third-party Javascript libraries compatible with Turbo
 

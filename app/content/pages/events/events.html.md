@@ -5,10 +5,10 @@ category: events
 
 # Events
 
-## Register Global Events in Your Markup
+### Register Global Events in Your Markup
 
-#### by @julianrubisch {% avatar julianrubisch size=24 %}
-{: .fs-3 }
+<!-- #### by @julianrubisch {% avatar julianrubisch size=24 %} -->
+<!-- {: .fs-3 } -->
 
 
 Bad

@@ -22,7 +22,7 @@
 
 main {
   display: grid;
-  grid-template-columns: 20% 1fr 20%;
+  grid-template-columns: 20% 1fr 10%;
   grid-template-rows: 1fr;
   grid-column-gap: 4rem;
   grid-row-gap: 2rem;
@@ -37,6 +37,7 @@ main {
 // code blocks
 .code-block-wrapper {
   position: relative;
+  margin-bottom: var(--pico-spacing);
 }
 
 .code-clipboard-button {
@@ -54,13 +55,15 @@ main {
 
 pre {
   background: #151515;
-  padding: 1rem;
   line-height: 1.7;
+  padding: 1rem;
+  margin-bottom: 0;
 }
 
 nav[aria-label="breadcrumb"] {
   padding-left: var(--pico-block-spacing-vertical);
-  --pico-nav-breadcrumb-divider: '|';
+  --pico-nav-breadcrumb-divider: '/';
+  font-size: 0.875em;
 }
 
 article {
@@ -88,4 +91,40 @@ aside.category-subnav {
       }
     } 
   }
+}
+
+.border {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: calc(var(--pico-border-radius) * 1.5);
+}
+
+.border-green {
+  border-color: #{$green-300};
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  border-radius: calc(var(--pico-border-radius));
+  padding: 0.25rem 0.5rem;
+  font-weight: 400;
+}
+
+.label-green {
+  background-color: #{$green-50};
+  border: 1px solid #{$green-300};
+  color: #{$green-500};
+}
+
+.label-red {
+  background-color: #{$red-50};
+  border: 1px solid #{$red-300};
+  color: #{$red-500};
+}
+
+.label-purple {
+  background-color: #{$purple-50};
+  border: 1px solid #{$purple-300};
+  color: #{$purple-500};
 }

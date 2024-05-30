@@ -5,8 +5,8 @@ category: interaction
 
 # Use Callbacks to Communicate Between Controllers
 
-#### by @geetfun {% avatar geetfun size=24 %}
-{: .fs-3 }
+<!-- #### by @geetfun {% avatar geetfun size=24 %} -->
+<!-- {: .fs-3 } -->
 
 - You want to maintain a set of logic in a single StimulusJS component
 - You need the value from another controller to perform your function

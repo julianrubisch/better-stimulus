@@ -43,9 +43,30 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
     end
   end
 
+  def paragraph(text)
+    # Regular expression to match the custom attribute syntax
+    if text =~ /\{\:\s*\.\s*(.*?)\s*\}$/
+      # Extract the class and the content
+      attributes = $1.split('.').map(&:strip).reject(&:empty?).join(' ')
+      content = text.gsub(/\{\:\s*\.\s*.*?\s*\}$/, '')
+
+      # Apply the attributes to the paragraph
+      "<p class=\"#{attributes}\">#{content}</p>"
+    else
+      # Default behavior for paragraphs without custom attributes
+      "<p>#{text}</p>"
+    end
+  end
+
   def block_code(code, language)
+    if code =~ /\{\:\s*\.\s*(.*?)\s*\}$/
+      # Extract the class and the content
+      attributes = $1.split('.').map(&:strip).reject(&:empty?).join(' ')
+      code = code.gsub(/\{\:\s*\.\s*.*?\s*\}$/, '')
+    end
+
     lexer = Rouge::Lexer.find(language)
-    content_tag :div, data: {controller: "clipboard", clipboard_success_content_value: "Copied!"}, class: "code-block-wrapper" do
+    content_tag :div, data: {controller: "clipboard", clipboard_success_content_value: "Copied!"}, class: "code-block-wrapper #{attributes}" do
       (tag.button class: "code-clipboard-button", data: {action: "clipboard#copy", clipboard_target: "button", title: "Copy to clipboard"} do
         heroicon "clipboard-document-check"
        end) + (tag.div class: "hidden", data: {clipboard_target: "source"} do
