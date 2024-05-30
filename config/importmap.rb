@@ -7,3 +7,4 @@ pin "@hotwired/stimulus-loading", to: "stimulus-loading.js"
 
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin "@stimulus-components/clipboard", to: "@stimulus-components--clipboard.js" # @5.0.0
+pin "@domchristie/turn", to: "@domchristie--turn.js" # @3.1.1
