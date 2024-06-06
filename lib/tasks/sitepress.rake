@@ -23,3 +23,17 @@ namespace :sitepress do
     end
   end
 end
+
+unless ENV["SKIP_SITEPRESS_BUILD"]
+  if Rake::Task.task_defined?("assets:precompile")
+    Rake::Task["assets:precompile"].enhance(["sitepress:pagefind:build"])
+  end
+
+  if Rake::Task.task_defined?("test:prepare")
+    Rake::Task["test:prepare"].enhance(["sitepress:pagefind:build"])
+  elsif Rake::Task.task_defined?("spec:prepare")
+    Rake::Task["spec:prepare"].enhance(["sitepress:pagefind:build"])
+  elsif Rake::Task.task_defined?("db:test:prepare")
+    Rake::Task["db:test:prepare"].enhance(["sitepress:pagefind:build"])
+  end
+end

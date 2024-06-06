@@ -27,6 +27,8 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 
+  # TODO call this in release command
+
   site.resources.glob("**/*").each do |article|
     add article.request_path, priority: 0.7, changefreq: "daily"
   end
