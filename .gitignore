@@ -44,3 +44,4 @@
 /db/**/*.sqlite3-*
 *~
 /app/assets/.DS_Store
+/public/pagefind/
