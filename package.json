@@ -3,6 +3,7 @@
   "private": "true",
   "dependencies": {
     "@domchristie/turn": "^3.1.1",
+    "@pagefind/default-ui": "^1.1.0",
     "@picocss/pico": "^2.0.6",
     "sass": "^1.77.1"
   },

@@ -23,11 +23,23 @@
         <ul class="search-container">
           <li data-controller="search">
             <div data-search-target="button">
-              <div role="button" data-action="click->search#open" class="outline secondary search">
+              <div role="button" data-action="click->search#open keydown.meta+k@document->search#open keydown.ctrl+k@document->search#open" class="outline secondary search">
                 <%= heroicon "magnifying-glass" %>
                 <span>Search</span>
                 <kbd>Cmd/Ctrl+K</kbd>
               </div>
+
+              <dialog data-search-target="dialog">
+                <article>
+                  <header>
+                    <button aria-label="Close" rel="prev" data-action="search#close"></button>
+                    <p>
+                      <strong>Global Site Search</strong>
+                    </p>
+                  </header>
+                  <div data-search-target="search"></div>
+                </article>
+              </dialog>
             </div>
           </li>
         </ul>
