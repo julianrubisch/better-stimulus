@@ -18,7 +18,22 @@
     <header class="container">
       <nav>
         <ul>
-          <li><h4><%= link_to "Better Stimulus JS", "/" %></h4></li>
+          <li><strong><%= link_to "Better Stimulus JS", "/" %></strong></li>
+        </ul>
+        <ul class="search-container">
+          <li data-controller="search">
+            <div data-search-target="button">
+              <div role="button" data-action="click->search#open" class="outline secondary search">
+                <%= heroicon "magnifying-glass" %>
+                <span>Search</span>
+                <kbd>Cmd/Ctrl+K</kbd>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li>Sponsors</li>
+          <li>Contributors</li>
         </ul>
       </nav>
     </header>
@@ -75,5 +90,6 @@
       <aside>
       </aside>
     </main>
+    <footer></footer>
   </body>
 </html>

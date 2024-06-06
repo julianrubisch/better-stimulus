@@ -129,3 +129,25 @@ aside.category-subnav {
   border: 1px solid #{$purple-300};
   color: #{$purple-500};
 }
+
+// search
+.search-container {
+  width: 33%;
+
+  li {
+    width: 100%;
+  }
+
+  .search[role="button"] {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    
+  }
+}
