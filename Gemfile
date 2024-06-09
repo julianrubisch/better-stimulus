@@ -84,3 +84,5 @@ gem "sitemap_generator", "~> 6.3"
 gem "active_hash", "~> 3.3"
 
 gem "heroicon", "~> 1.0"
+
+gem "meta-tags", "~> 2.21"

@@ -1,6 +1,8 @@
 ---
+layout: article
 title: Application Controller
 category: architecture
+preview_text: You can make use of JavaScript's class inheritance to set up an "Application Controller" that will serve as the foundation for all of your controllers to build upon.
 ---
 
 # Application Controller

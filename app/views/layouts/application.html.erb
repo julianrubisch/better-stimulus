@@ -8,6 +8,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= yield :meta if content_for? :meta %>
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
@@ -76,7 +78,7 @@
       </aside>
 
       <article class="overflow-auto" data-turn-enter data-turn-exit>
-        <%= yield %>
+        <%= content_for?(:content) ? yield(:content) : yield %>
       </article>
 
       <aside>
