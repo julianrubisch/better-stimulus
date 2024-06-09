@@ -71,6 +71,7 @@ gem "litestack", "~> 0.4.3"
 gem "litestream", "~> 0.10.1"
 
 gem "sitepress-rails", "~> 4.0"
+gem "sitepress-pagefind"
 
 gem "importmap-rails", "~> 2.0"
 

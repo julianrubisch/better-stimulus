@@ -1,0 +1,37 @@
+<% content_for :title do %>
+  <title><%= current_page.data["title"] %> | <%= t('application.name') %></title>
+<% end %>
+
+<% if current_page.data["image"].present? %>
+  <% content_for :image do %>
+    <%= image_url current_page.data["image"]&.split(".")&.insert(-2, "medium")&.join(".") %>
+  <% end %>
+<% end %>
+
+<% content_for :description do %>
+  <meta content="<%= current_page.data["preview_text"] %>" name="description" />
+<% end %>
+
+<% content_for :meta do %>
+  <% site = Sitepress::Site.new(root_path: "app/content") %>
+  <%= display_meta_tags site: "Betterstimulus",
+                        title: "Betterstimulus | #{current_page.data["title"]}",
+                        description: current_page.data["preview_text"],
+                        icon: '/favicon.ico',
+                        og: {
+                          title: :title,
+                          site_name: :site,
+                        },
+                        twitter: {
+                          card: "summary_large_image",
+                          creator: "@julian_rubisch",
+                          site: "@julian_rubisch",
+                        }
+  %>
+<% end %>
+
+<% content_for :content do %>
+  <%= yield %>
+<% end %>
+
+<%= render template: "layouts/application" %>

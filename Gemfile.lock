@@ -263,6 +263,9 @@ GEM
       builder (~> 3.0)
     sitepress-core (4.0.2)
       mime-types (>= 2.99)
+    sitepress-pagefind (0.1.0)
+      rails (>= 7)
+      sitepress-core (>= 4)
     sitepress-rails (4.0.2)
       actionpack (>= 6.0)
       railties (>= 6.0)
@@ -335,6 +338,7 @@ DEPENDENCIES
   rouge (~> 4.2)
   selenium-webdriver
   sitemap_generator (~> 6.3)
+  sitepress-pagefind
   sitepress-rails (~> 4.0)
   sqlite3 (~> 1.4)
   stimulus-rails
