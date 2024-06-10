@@ -1,6 +1,8 @@
 ---
+layout: article
 title: Mixins
 category: architecture
+preview_text: Stimulus controllers are meant to be used as mixins themselves (i.e. applying multiple controllers to one DOM element, thus mixing in behavior). Sometimes though, it might even be advisable to share behavior on the controller level.
 ---
 
 # Mixins

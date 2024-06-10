@@ -1,6 +1,8 @@
 ---
+layout: article
 title: Global Teardown
 category: turbo
+preview_text: In a Stimulus controller, typically disconnect is concerned with teardown code, however, it could be argued that the general lifecycle callbacks should be kept free of any code that’s not concerned with the controller and its elements per se. With Turbo-related teardown logic getting its own lifecycle method, there’s exactly one place where that rollback should happen, and every controller can opt in to this behavior, or not.
 ---
 
 # Global Teardown

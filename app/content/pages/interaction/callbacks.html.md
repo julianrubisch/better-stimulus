@@ -1,6 +1,8 @@
 ---
+layout: article
 title: Use Callbacks to Communicate Between Controllers
 category: interaction
+preview_text: Your code may grow to the point where you’ll have a lot of controllers needing data from other controllers. You could write multiple event triggers to link them all up together, but this would be redundant and inefficient.
 ---
 
 # Use Callbacks to Communicate Between Controllers
