@@ -3,14 +3,8 @@ layout: article
 title: Namespaced Attributes
 category: architecture
 preview_text: We might want to work with an arbitrary set of attributes that are namespace not just to the controller but identified as parameters.
-
-
+author: leastbad
 ---
-
-# Namespaced Attributes
-
-<!-- #### by @leastbad {% avatar leastbad size=24 %} -->
-<!-- {: .fs-3 } -->
 
 Good
 {: .label .label-green}

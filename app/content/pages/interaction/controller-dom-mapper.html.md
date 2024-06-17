@@ -3,14 +3,10 @@ layout: article
 title: Controller DOM Mapper
 category: interaction
 preview_text: You’re trying to access the internal state of a controller from outside of that controller
+author: julianrubisch
 ---
 
-# Controller DOM Mapper
-
 ## TODO rewrite: outlets
-
-<!-- #### by @julianrubisch {% avatar julianrubisch size=24 %} -->
-<!-- {: .fs-3 } -->
 
 
 ### Pain Point

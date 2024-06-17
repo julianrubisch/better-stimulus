@@ -167,3 +167,25 @@ aside.category-subnav {
     
   }
 }
+
+.person-header {
+  h3 {
+    display: flex;
+    gap: 1rem;
+  }
+
+  a {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: baseline;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+.person-articles-list {
+  margin-top: 2rem;
+}

@@ -3,14 +3,10 @@ layout: article
 title: Events
 category: events
 preview_text: Register Global Events in Your Markup. Stimulus will handle the adding and removing of event listeners.
+author: julianrubisch
 ---
 
-# Events
-
 ### Register Global Events in Your Markup
-
-<!-- #### by @julianrubisch {% avatar julianrubisch size=24 %} -->
-<!-- {: .fs-3 } -->
 
 
 Bad

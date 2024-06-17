@@ -3,16 +3,13 @@ layout: article
 title: Global Error Handler
 category: error_handling
 preview_text: You want to catch errors pertaining to Stimulus (connect errors, targets not being accessible etc.) as well as application errors within your controllers and send them to an error tracking service of your choice.
+author: adrienpoly
 ---
 
 
 Updated for Stimulus 2
 {: .label .label-purple }
 
-# Global Error Handler
-
-<!-- #### by @adrienpoly {% avatar adrienpoly size=24 %} -->
-<!-- {: .fs-3 } -->
 
 ### Pain Point
 

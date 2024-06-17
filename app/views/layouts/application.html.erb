@@ -27,7 +27,7 @@
         </ul>
         <ul>
           <li>Sponsors</li>
-          <li>Contributors</li>
+          <li><%= link_to "Contributors", "/contributors" %></li>
         </ul>
       </nav>
     </header>
@@ -37,7 +37,9 @@
       <div>
         <nav aria-label="breadcrumb">
           <ul>
-            <li><a href="#"><%= current_category %></a></li>
+            <% if current_category %>
+              <li><a href="#"><%= current_category %></a></li>
+            <% end %>
             <li><%= current_page.data.title %></li>
           </ul>
         </nav>

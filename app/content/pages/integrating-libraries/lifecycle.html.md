@@ -3,12 +3,10 @@ layout: article
 title: Use Lifecycle Events for Setup and Teardown
 category: integrating-libraries
 preview_text: Using Stimulus lifecycle events allows you to make most Javascript libraries compatible with Turbo without additional effort. You can use the connect lifecycle event to setup the instance and the disconnect event to teardown.
+author: excid3
 ---
 
-<!-- #### by @excid3 {% avatar excid3 size=24 %} -->
-<!-- {: .fs-3 } -->
-
-## Lifecycle events provide the perfect mechanism to make third-party Javascript libraries compatible with Turbo
+### Lifecycle events provide the perfect mechanism to make third-party Javascript libraries compatible with Turbo
 
 Bad
 {: .label .label-red }

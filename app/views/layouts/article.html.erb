@@ -31,6 +31,20 @@
 <% end %>
 
 <% content_for :content do %>
+  <h1><%= current_page.data["title"] %></h1>
+  <% if current_page.data["author"].present? %>
+    <% author = PageModel.find(current_page).author %>
+    <h6>by <%= link_to_page author %> <%= image_tag "#{author.github_avatar_url}?size=24" %></h6>
+  <% end %>
+  <% if current_page.data["authors"].present? %>
+    <% authors = PageModel.find(current_page).authors %>
+    <h6>by
+      <%# TODO to_sentence %>
+      <% authors.each do |author| %>
+        <%= link_to_page author %> <%= image_tag "#{author.github_avatar_url}?size=24" %>, 
+      <% end %>
+    </h6>
+  <% end %>
   <%= yield %>
 <% end %>
 
