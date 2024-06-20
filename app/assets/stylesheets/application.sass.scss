@@ -131,6 +131,12 @@ aside.category-subnav {
   color: #{$purple-500};
 }
 
+.label-yellow {
+  background-color: #{$yellow-50};
+  border: 1px solid #{$yellow-300};
+  color: #{$yellow-500};
+}
+
 // search
 :root {
   --pagefind-ui-scale: 1;
@@ -188,4 +194,8 @@ aside.category-subnav {
 
 .person-articles-list {
   margin-top: 2rem;
+}
+
+.alert {
+  margin-bottom: 2rem;
 }
