@@ -1,1 +1,0 @@
-clas PersonPage 
