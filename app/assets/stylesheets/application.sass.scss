@@ -200,3 +200,21 @@ aside.category-subnav {
 .alert {
   margin-bottom: 2rem;
 }
+
+body > footer {
+  background-color: #{$sand-900};
+  color: white;
+
+  a {
+    color: #{$pumpkin-200};
+  }
+
+  ul {
+    margin-top: 0.5rem;
+    color: white;
+    padding-left: 0;
+    li {
+      list-style-type: none;
+    }
+  }
+}
