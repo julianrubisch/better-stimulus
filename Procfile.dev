@@ -1,2 +1,2 @@
 web: env RUBY_DEBUG_OPEN=true bin/rails server
-css: bun run build:css --watch
+css: yarn build:css --watch

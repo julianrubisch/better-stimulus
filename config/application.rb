@@ -37,5 +37,6 @@ module Betterstimulus
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.hosts << "betterstimulus.eu.ngrok.io"
+    config.hosts << "localhost"
   end
 end
