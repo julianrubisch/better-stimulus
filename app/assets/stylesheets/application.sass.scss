@@ -260,3 +260,65 @@ body > footer {
     }
   }
 }
+
+// pricing and sponsorships
+.pricing-table {
+  margin-top: 1rem;
+}
+
+.pricing-item {
+  border-radius: calc(var(--pico-border-radius));
+  padding: 1rem;
+
+  p {
+    color: #{$purple-800};
+  }
+
+  h5 {
+    color: #{$purple-700};
+  }
+
+  .price {
+    h1 {
+      color: #{$purple-700};
+    }
+
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    color: #{$purple-700};
+  }
+
+  .price-alternative {
+    color: #{$zinc-500};
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  a[role="button"] {
+    display: block;
+    font-weight: 400;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  ul {
+    margin-top: 1rem;
+    padding-left: 0;
+    color: #{$purple-800};
+
+    svg {
+      flex: none;
+      height: 1rem;
+      width: 0.8rem;
+    }
+    
+    li {
+      list-style-type: none;
+      display: flex;
+      gap: 0.75rem;
+      font-size: 1rem;
+    }
+  }
+}
