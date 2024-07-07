@@ -25,10 +25,13 @@
         <ul class="search-container">
           <%= render "pagefind/search" %>
         </ul>
-        <ul>
+        <ul id="right-nav">
           <li><%= link_to "Sponsors", "/sponsors" %></li>
           <li><%= link_to "Contributors", "/contributors" %></li>
         </ul>
+        <div id="mobile-nav-button">
+          <%= heroicon "bars-3" %>
+        </div>
       </nav>
     </header>
     <main class="container">
@@ -47,7 +50,7 @@
       <div></div>
       
       <!-- content row -->
-      <aside>
+      <aside id="articles-nav">
         <nav>
           <ul>
             <% Category.all.each do |category| %>

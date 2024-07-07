@@ -51,6 +51,26 @@ main {
   }
 }
 
+#right-nav {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+#mobile-nav-button {
+  display: none;
+  align-self: center;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -220,7 +240,12 @@ aside.category-subnav {
       width: 1.2rem;
       height: 1.2rem;
     }
-    
+
+    kbd {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
   }
 }
 
