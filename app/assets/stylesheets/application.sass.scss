@@ -15,6 +15,18 @@
   --pico-font-weight: 300;
 }
 
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --mobile-nav-hamb-color: white;
+  }
+}
+
+@media only screen and (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --mobile-nav-hamb-color: black;
+  }
+}
+
 [data-theme="light"], :root:not([data-theme="dark"]) {
   --pico-secondary: #{$sand-550};
   --pico-secondary-hover: #{$sand-700};
@@ -60,9 +72,64 @@ main {
 #mobile-nav-button {
   display: none;
   align-self: center;
+  cursor: pointer;
+
 
   @media (max-width: 767px) {
     display: block;
+
+    aside {
+      position: fixed;
+      z-index: 100;
+      background-color: var(--pico-background-color);
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      left: 0;
+      margin-top: 3rem;
+      padding: 0 1rem;
+
+      max-height: 0;
+      transition: max-height .5s ease-out;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .hamb {
+      cursor: pointer;
+      float: right;
+    }
+
+    .hamb-line {
+      background-color: var(--mobile-nav-hamb-color);
+      height: 1px;
+      width: 24px;
+      position: relative;
+      display: block;
+    }
+
+    .hamb-line::before, .hamb-line::after {
+      background-color: var(--mobile-nav-hamb-color);
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+
+    .hamb-line::before {
+      top: -5px;
+    }
+
+    .hamb-line::after {
+      top: 5px;
+    }
+
+    input[type="checkbox"]:checked ~ aside {
+      max-height: 100%
+    }
   }
 
   svg {

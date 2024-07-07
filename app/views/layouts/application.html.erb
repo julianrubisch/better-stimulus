@@ -29,8 +29,18 @@
           <li><%= link_to "Sponsors", "/sponsors" %></li>
           <li><%= link_to "Contributors", "/contributors" %></li>
         </ul>
+        <!-- mobile nav -->
         <div id="mobile-nav-button">
-          <%= heroicon "bars-3" %>
+          <input type="checkbox" id="mobile-nav">
+          <label for="mobile-nav" class="hamb"><span class="hamb-line"></span></label>
+          <aside>
+            <nav>
+              <ul>
+                <li><%= link_to "Sponsors", "/sponsors" %></li>
+                <li><%= link_to "Contributors", "/contributors" %></li>
+              </ul>
+            </nav>
+          </aside>
         </div>
       </nav>
     </header>
