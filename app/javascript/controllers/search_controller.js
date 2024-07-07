@@ -1,11 +1,14 @@
 import { Controller } from "@hotwired/stimulus";
+import Dialog from "@stimulus-components/dialog";
 import { PagefindUI } from "@pagefind/default-ui";
 
 // Connects to data-controller="search"
-export default class extends Controller {
+export default class extends Dialog {
   static targets = ["button", "dialog", "search"];
 
   connect() {
+    super.connect();
+
     this.search = new PagefindUI({
       element: this.searchTarget,
       highlightParam: "highlight",
@@ -15,14 +18,8 @@ export default class extends Controller {
   }
 
   disconnect() {
+    super.disconnect();
+
     this.search.destroy();
-  }
-
-  open() {
-    this.dialogTarget.showModal();
-  }
-
-  close() {
-    this.dialogTarget.close();
   }
 }
