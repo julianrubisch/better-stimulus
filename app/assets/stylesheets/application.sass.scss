@@ -24,12 +24,31 @@
 
 main {
   display: grid;
-  grid-template-columns: 20% 1fr 10%;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 4rem;
-  grid-row-gap: 2rem;
   justify-items: stretch;
   align-items: stretch;
+
+  @media (max-width: 767px) {
+    #toc {
+      display: none;
+    }
+
+    & > article {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 1rem !important;
+      border-top: 1px solid #{$pumpkin-500};
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 20% 1fr 10%;
+    grid-column-gap: 4rem;
+    grid-row-gap: 2rem;
+  }
 }
 
 .hidden {
