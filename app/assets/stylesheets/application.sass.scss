@@ -50,9 +50,6 @@ main {
       padding-left: 0;
       padding-right: 0;
       padding-top: 1rem !important;
-      border-top: 1px solid #{$pumpkin-500};
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
     }
   }
 
@@ -168,10 +165,30 @@ pre {
   margin-bottom: 0;
 }
 
+#breadcrumbs {
+  svg {
+    width: 1rem;
+    height: 1rem;
+    margin-bottom: 0.2rem;
+    margin-right: 0.5rem;
+  }
+}
+
 nav[aria-label="breadcrumb"] {
+  // hide on large screens
+  @media (min-width: 768px) {
+    display: none;
+  }
+
   padding-left: var(--pico-block-spacing-vertical);
   --pico-nav-breadcrumb-divider: '/';
   font-size: 0.875em;
+
+  & button {
+    background: none;
+    padding: 0;
+    border: 0;
+  }
 }
 
 :not(dialog) > article {
@@ -207,6 +224,12 @@ nav[aria-label="breadcrumb"] {
   img {
     border-radius: 9999px;
     width: 4rem;
+  }
+}
+
+aside#articles-nav {
+  @media(max-width: 767px) {
+    display: none;
   }
 }
 

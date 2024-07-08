@@ -1,0 +1,29 @@
+<nav>
+  <ul>
+    <% Category.all.each do |category| %>
+      <li>
+        <details <%= "open" if category == current_category %>>
+          <summary><strong><%= category %></strong></summary>
+          <aside class="category-subnav">
+            <nav>
+              <ul>
+                <% PageModel.all.select { _1.category == category.slug }.each do |page| %>
+                  <li>
+                    <%= link_to page.request_path, class: "secondary #{"active" if current_page == page}" do %>
+                      <small>
+                        <% if current_page == page %><strong><% end %>
+                          <%= page.data.fetch("title", page.request_path) %>
+                          <% if current_page == page %></strong><% end %>
+                      </small>
+                    <% end %>
+                  </li>
+                <% end %>
+                
+              </ul>
+            </nav>
+          </aside>
+        </details>
+      </li>
+    <% end %>
+  </ul>
+</nav>

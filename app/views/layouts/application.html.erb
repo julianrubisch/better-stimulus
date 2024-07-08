@@ -47,9 +47,21 @@
     <main class="container">
       <!-- breadcrumb row -->
       <div></div>
-      <div>
+      <div id="breadcrumbs" data-controller="dialog">
+        <dialog data-dialog-target="dialog">
+          <article>
+            <header>
+              <button aria-label="Close" rel="prev" data-action="search#close"></button>
+              <p><strong>Articles</strong></p>
+            </header>
+            <aside>
+              <%= render "nav/articles_nav", current_category: %>
+            </aside>
+          </article>
+        </dialog>
         <nav aria-label="breadcrumb">
           <ul>
+            <li><button data-action="dialog#open" id="breadcrumb-dialog-button"><%= heroicon "bars-3" %></button></li>
             <% if current_category %>
               <li><a href="#"><%= current_category %></a></li>
             <% end %>
@@ -61,35 +73,7 @@
       
       <!-- content row -->
       <aside id="articles-nav">
-        <nav>
-          <ul>
-            <% Category.all.each do |category| %>
-              <li>
-                <details <%= "open" if category == current_category %>>
-                  <summary><strong><%= category %></strong></summary>
-                  <aside class="category-subnav">
-                    <nav>
-                      <ul>
-                        <% PageModel.all.select { _1.category == category.slug }.each do |page| %>
-                          <li>
-                            <%= link_to page.request_path, class: "secondary #{"active" if current_page == page}" do %>
-                              <small>
-                                <% if current_page == page %><strong><% end %>
-                                  <%= page.data.fetch("title", page.request_path) %>
-                                  <% if current_page == page %></strong><% end %>
-                              </small>
-                            <% end %>
-                          </li>
-                        <% end %>
-                        
-                      </ul>
-                    </nav>
-                  </aside>
-                </details>
-              </li>
-            <% end %>
-          </ul>
-        </nav>
+        <%= render "nav/articles_nav", current_category: %>
       </aside>
 
       <article class="overflow-auto" data-turn-enter data-turn-exit>
