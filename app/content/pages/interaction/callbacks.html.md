@@ -36,8 +36,8 @@ export default class extends Controller {
     }.bind(this))
   }
 }
+{: .border .border-red }
 ```
-{: .border-red }
 
 Good
 {: .label .label-green }
@@ -67,8 +67,8 @@ export default class extends Controller {
     })
   }
 }
+{: .border .border-green }
 ```
-{: .border-green }
 
 ### Rationale
 Your code may grow to the point where you'll have a lot of controllers needing data from other controllers. You could write multiple event triggers to link them all up together, but this would be redundant and inefficient.

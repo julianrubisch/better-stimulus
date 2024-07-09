@@ -17,16 +17,17 @@ Good
 ```html
 <!-- index.html -->
 <div data-controller="modal">
-  <template data-target="modal.template">
+  <template data-modal-target="template">
     <div>
       <a href="#" data-action="modal#show">Click Me</a>
-      <div class="modal invisible" data-target="modal.modal">
+      <div class="modal invisible" data-modal-target="modal">
         <h1>A Modal</h1>
         <a href="#" data-action="modal#hide">Hide Me</a>
       </div>
     </div>
   </template>
 </div>
+{: .border .border-green}
 ```
 
 ```js
@@ -58,6 +59,8 @@ export default class extends Controller {
     this.element.insertAdjacentHTML("beforeend", this.templateTarget.innerHTML);
   }
 }
+
+{: .border .border-green}
 ```
 
 ### Rationale
@@ -71,10 +74,10 @@ Certainly there are easier ways to restore markup when manipulating the DOM, esp
 ### References
 - [https://dev.to/adrienpoly/animations-with-turbolinks-and-stimulus-4862](https://dev.to/adrienpoly/animations-with-turbolinks-and-stimulus-4862)
 
-### Codesandbox Example
-<iframe src="https://codesandbox.io/embed/dazzling-meadow-h8dru?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcontrollers%2Fmodal_controller.js&theme=dark&view=preview"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="dazzling-meadow-h8dru"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+<!-- ### Codesandbox Example -->
+<!-- <iframe src="https://codesandbox.io/embed/dazzling-meadow-h8dru?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcontrollers%2Fmodal_controller.js&theme=dark&view=preview" -->
+<!--      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" -->
+<!--      title="dazzling-meadow-h8dru" -->
+<!--      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" -->
+<!--      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts" -->
+<!--    ></iframe> -->

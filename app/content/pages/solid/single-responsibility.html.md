@@ -16,11 +16,11 @@ Bad
 ```html
 <!-- page.html -->
 <div data-controller="page">
-  <form action="/" data-target="page.form"></form>
-  <div data-target="page.modal" class="modal"></div>
+  <form action="/" data-page-target="form"></form>
+  <div data-page-target="modal" class="modal"></div>
 </div> 
+{: .border .border-red}
 ```
-{: .border-red}
 
 ```js
 // page_controller.js
@@ -37,8 +37,8 @@ export default class extends Controller {
     this.formTarget.submit();
   }
 }
+{: .border .border-red}
 ```
-{: .border-red}
 
 Good
 {: .label .label-green }
@@ -49,8 +49,8 @@ Good
   <form action="/" data-controller="form"></form>
   <div data-controller="modal" class="modal"></div>
 </div> 
+{: .border .border-green}
 ```
-{: .border-green}
 
 ```js
 // modal_controller.js
@@ -61,8 +61,8 @@ export default class extends Controller {
     this.element.classList.add("open");
   }
 }
+{: .border .border-green}
 ```
-{: .border-green}
 
 ```js
 // form_controller.js
@@ -73,8 +73,8 @@ export default class extends Controller {
     this.element.submit();
   }
 }
+{: .border .border-green}
 ```
-{: .border-green}
 
 ### Rationale
 Books have been written about this very single topic, but let it be said that classes/modules that serve a single responsibility are

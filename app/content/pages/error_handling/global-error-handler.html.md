@@ -52,7 +52,6 @@ export default class extends ApplicationController {
 
 In your controllers now you can catch errors and pass them to `this.handleError` for reporting.
 
-{: .border-green}
 
 ```js
 // app/javascript/controllers/some_controller.js
@@ -66,13 +65,13 @@ export default class extends ApplicationController {
     }
   }
 }
+{: .border .border-green}
 ```
 
 ### Adding a reporting service
 
 Here is an example to configure Sentry for reporting Stimulus errors :
 
-{: .border-green}
 
 ```js
 // app/javascript/packs/application.js
@@ -94,6 +93,8 @@ const sentryErrorHandler = (error, message, detail = {}) => {
 
 // overwrite the default handler with our new composed handler
 application.handleError = sentryErrorHandler;
+
+{: .border .border-green}
 ```
 
 This new instrumented handler will now send global errors to Sentry. The example above shows how you can furthermore use this function to catch errors in our own application code in `try/catch` blocks.

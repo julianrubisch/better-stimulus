@@ -16,7 +16,7 @@ Any transitional changes to the state before caching will thus lead to a flash o
 To fix this situation, add a `teardown` method to any controller that manipulates the DOM and needs to roll its changes back. Using the following snippet, placed for example in your `app/javascript/packs/application.js`, you can globally reset the state of every controller which implements this method.
 
 ```js
-// app/javascript/packs/application.js
+// app/javascript/application.js
 document.addEventListener('turbo:before-cache', () => {
   application.controllers.forEach(controller => {
     if (typeof controller.teardown === 'function') {
@@ -24,8 +24,8 @@ document.addEventListener('turbo:before-cache', () => {
     }
   })
 })
+{: .border .border-green}
 ```
-{: .border-green}
 
 ```js
 // app/javascript/controllers/any_controller.js
@@ -38,8 +38,8 @@ export default class extends Controller {
     this.element.classList.remove('play-animation')
   }
 }
+{: .border .border-green}
 ```
-{: .border-green}
 
 ### Rationale
 

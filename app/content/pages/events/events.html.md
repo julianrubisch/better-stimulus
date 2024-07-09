@@ -16,23 +16,23 @@ Bad
 connect() {
   document.addEventListener(...);
 }
+{: .border .border-red }
 ```
-{: .border-red }
 
 Good
 {: .label .label-green }
 
 ```html
 <div data-controller="gallery" data-action="resize@window->gallery#layout">...</div>
+{: .border .border-green }
 ```
-{: .border-green }
 
 ```js
 layout(e) {
   ...
 }
+{: .border .border-green }
 ```
-{: .border-green }
 
 ### Rationale
 Stimulus will handle the adding and removing of event listeners.

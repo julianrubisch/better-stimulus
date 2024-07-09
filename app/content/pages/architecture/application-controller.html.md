@@ -44,11 +44,11 @@ Inheritance isn't always the answer to share behavior. Before bloating your `App
 ### References
 - Courtesy of [https://docs.stimulusreflex.com/patterns](https://docs.stimulusreflex.com/patterns)
 
-### Codesandbox Example
-<iframe
-     src="https://codesandbox.io/embed/practical-shockley-lo5ns?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcontrollers%2Fexample_controller.js&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="practical-shockley-lo5ns"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+<!-- ### Codesandbox Example -->
+<!-- <iframe -->
+<!--      src="https://codesandbox.io/embed/practical-shockley-lo5ns?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcontrollers%2Fexample_controller.js&theme=dark" -->
+<!--      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" -->
+<!--      title="practical-shockley-lo5ns" -->
+<!--      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" -->
+<!--      sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts" -->
+<!--    ></iframe> -->

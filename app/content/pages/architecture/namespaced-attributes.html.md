@@ -12,8 +12,8 @@ Good
 ```html
 <!-- index.html -->
 <input data-controller="filter" data-filter-param-category="cats" data-filter-param-rating="5" data-filter-param-color="black" type="text" data-action="input->filter#update">
+{: .border .border-green}
 ```
-{: .border-green}
 
 ```js
 // filter_controller.js
@@ -33,8 +33,8 @@ export default class extends Controller {
     history.pushState({}, '', url.toString())
   }
 }
+{: .border .border-green}
 ```
-{: .border-green}
 
 ### Rationale
 Building on the [Configurable Controllers](../architecture/configurable-controllers.md) example, we might want to work with an arbitrary set of attributes that are namespace not just to the controller but identified as parameters.
@@ -43,12 +43,12 @@ Unfortunately, Stimulus doesn't make it easy to obtain a list of available attri
 
 **Note**: you'll need to adjust the value passed to `slice` to account for the length of your controller's identifier.
 
-### Codesandbox Example
+<!-- ### Codesandbox Example -->
 
-<iframe
-     src="https://codesandbox.io/embed/sweet-chaum-o8ry2?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcontrollers%2Ffilter_controller.js&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="sweet-chaum-o8ry2"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
+<!-- <iframe -->
+<!--      src="https://codesandbox.io/embed/sweet-chaum-o8ry2?fontsize=14&hidenavigation=1&module=%2Fsrc%2Fcontrollers%2Ffilter_controller.js&theme=dark" -->
+<!--      style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" -->
+<!--      title="sweet-chaum-o8ry2" -->
+<!--      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" -->
+<!--      sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts" -->
+<!--    ></iframe> -->
