@@ -81,6 +81,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.default_url_options = { host: 'www.betterstimulus.com' }
+  Rails.application.routes.default_url_options = config.action_mailer.default_url_options
+
   # Enable DNS rebinding protection and other `Host` header attacks.
   config.hosts = [
     "localhost",
