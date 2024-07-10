@@ -4,6 +4,7 @@ title: Namespaced Attributes
 category: architecture
 preview_text: We might want to work with an arbitrary set of attributes that are namespace not just to the controller but identified as parameters.
 author: leastbad
+cache: true
 ---
 
 Good

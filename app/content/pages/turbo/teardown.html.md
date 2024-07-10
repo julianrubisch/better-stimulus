@@ -6,6 +6,7 @@ preview_text: In a Stimulus controller, typically disconnect is concerned with t
 authors: 
   - leastbad
   - adrienpoly
+cache: true
 ---
 
 ### Pain Point

@@ -4,6 +4,7 @@ title: Single Responsibility Principle
 category: solid
 preview_text: Especially when applying Stimulus to your application for the first time, it is tempting to write your controllers in a page controller style, resulting in a disjointed accumulation of unrelated functionality. Resist that temptation - try to write reusable controllers.
 author: julianrubisch
+cache: true
 ---
 
 Especially when applying Stimulus to your application for the first time, it is tempting to write your controllers in a _page controller_ style, resulting in a disjointed accumulation of unrelated functionality. Resist that temptation - try to write reusable controllers.

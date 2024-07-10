@@ -4,6 +4,7 @@ title: Configurable Controllers
 category: architecture
 preview_text: Late binding of dependencies (in the simplest case above, the value of a CSS class. Other examples may include the ID of a DOM element or a CSS selector) ensures that your controller is re-usable across multiple use cases.
 author: julianrubisch
+cache: true
 ---
 
 Bad

@@ -4,6 +4,7 @@ title: Global Error Handler
 category: error_handling
 preview_text: You want to catch errors pertaining to Stimulus (connect errors, targets not being accessible etc.) as well as application errors within your controllers and send them to an error tracking service of your choice.
 author: adrienpoly
+cache: true
 ---
 
 

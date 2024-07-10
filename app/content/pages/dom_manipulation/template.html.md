@@ -4,6 +4,7 @@ title: Use <template> to Restore DOM State
 category: dom_manipulation
 preview_text: In some cases, it can be necessary to reset your DOM to a known state before leaving the page, or after triggering some action. One use case might be when dealing with external UI libraries like SemanticUI or Bootstrap that will yank away some HTML after, for example, closing a modal.
 author: julianrubisch
+cache: true
 ---
 
 
