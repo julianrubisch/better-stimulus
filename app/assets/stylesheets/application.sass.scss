@@ -195,6 +195,11 @@ nav[aria-label="breadcrumb"] {
   // reset "article" default style
   box-shadow: none;
   padding-top: 0;
+
+  h1 .label {
+    font-size: 1rem;
+    vertical-align: middle;
+  }
 }
 
 #contributors-list {
@@ -230,6 +235,12 @@ nav[aria-label="breadcrumb"] {
 aside#articles-nav {
   @media(max-width: 767px) {
     display: none;
+  }
+
+  .label {
+    font-size: 0.66rem;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.5rem;
   }
 }
 

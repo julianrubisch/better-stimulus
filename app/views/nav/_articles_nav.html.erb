@@ -15,10 +15,10 @@
                           <%= page.data.fetch("title", page.request_path) %>
                           <% if current_page == page %></strong><% end %>
                       </small>
+                      <% if page.data["new"] %><span class="label label-purple">New</span><% end %>
                     <% end %>
                   </li>
                 <% end %>
-                
               </ul>
             </nav>
           </aside>

@@ -31,7 +31,7 @@
 <% end %>
 
 <% content_for :content do %>
-  <h1><%= current_page.data["title"] %></h1>
+  <h1><%= current_page.data["title"] %> <% if current_page.data["new"] %><span class="label label-purple">New</span><% end %></h1>
   <% if current_page.data["author"].present? %>
     <% author = PageModel.find(current_page).author %>
     <h6>by <%= link_to_page author %> <%= image_tag "#{author.github_avatar_url}?size=24" %></h6>
