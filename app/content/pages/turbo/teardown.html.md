@@ -46,7 +46,7 @@ export default class extends Controller {
 
 In a Stimulus controller, typically `disconnect` is concerned with teardown code, however, it could be argued that the general lifecycle callbacks should be kept free of any code that's not concerned with the controller and its elements per se. With Turbo-related teardown logic getting its own lifecycle method, there's exactly one place where that rollback should happen, and every controller can opt in to this behavior, or not.
 
-### Counterindications
+### Contraindications
 There's something to say about the necessity of adding another teardown method, when all Stimulus controllers already come with a built-in `disconnect` function. You might not want to duplicate this behavior, probably depending on the intensity of Turbo usage in your application, and how Turbo-related teardown logic differs from other similar concerns.
 
 

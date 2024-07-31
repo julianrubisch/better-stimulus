@@ -13,9 +13,9 @@ servers:
       network: "better-stimulus-private"
     port: "3000:3000"
     labels:
-      traefik.http.routers.better-stimulus-web.rule: Host(`www.betterstimulus.com`)
+      traefik.http.routers.better-stimulus-web.rule: Host(`www.betterstimulus.com`) || Host(`betterstimulus.com`)
       traefik.http.routers.better-stimulus-web-secure.entrypoints: websecure
-      traefik.http.routers.better-stimulus-web-secure.rule: Host(`www.betterstimulus.com`)
+      traefik.http.routers.better-stimulus-web-secure.rule: Host(`www.betterstimulus.com`) || Host(`betterstimulus.com`)
       traefik.http.routers.better-stimulus-web-secure.tls: true
       traefik.http.routers.better-stimulus-web-secure.tls.certresolver: letsencrypt
 

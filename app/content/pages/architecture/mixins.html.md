@@ -94,7 +94,7 @@ If you're unsure about whether inheritance or mixin is the correct pattern, ask 
 - does my controller have a _is a_ relation to the target => **use inheritance**
 - does my controller have a _acts as a_ relation to the target => **use mixins**
 
-### Counterindications
+### Contraindications
 Mixins might still not be the right choice, *composition* might suit your needs even better. Is what you're modelling a trait (_acts as a_), or a collaborator (_has a_)? Use composition, i.e. model your collaborator as a separate JS module or class and instantiate it in the `connect` method!
 
 ### References

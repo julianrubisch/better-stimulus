@@ -74,7 +74,7 @@ Your code may grow to the point where you'll have a lot of controllers needing d
 
 The controller with the data should not have to trigger an event for all these instances. Instead, you can use the above method to allow each controller to return itself to a callback. 
 
-### Counterindications
+### Contraindications
 The purpose of the callback should be clear in your design. For instance, you do not want to abuse this method to trigger actions from other controllers. This would defeat the design of StimulusJS where each controller handles a single component. However, if you must communicate between controllers in some way, this method cleans up your code and provides a common interface (ie. message bus design pattern).
 
 ### References

@@ -59,5 +59,5 @@ export default class extends Controller {
 ### Rationale
 Stimulus values being serialized and stored in the DOM itself provides the single source of truth for the controller in question. This not only enables mutating state from outside (think via Turbo Streams or [Turbo Morphs](https://turbo.hotwired.dev/handbook/page_refreshes)), it also ties in neatly with [Turbo Caching](https://turbo.hotwired.dev/handbook/building#understanding-caching), for example.
 
-### Counterindications
+### Contraindications
 In some cases, controller state might not be serializable into one of the built-in [types](https://stimulus.hotwired.dev/reference/values#types). Other times, they might contain sensitive data that you do **not** want to be exposed in the HTML.

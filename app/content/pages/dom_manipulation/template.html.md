@@ -69,7 +69,7 @@ In some cases, it can be necessary to reset your DOM to a known state before lea
 
 Furthermore this can be useful when using Turbo, because it will cache the current state before navigating away and show it as a preview when doing a restoration visit.
 
-### Counterindications
+### Contraindications
 Certainly there are easier ways to restore markup when manipulating the DOM, especially when you're dealing only with single elements on which you toggle CSS classes. Whenever you need to replace larger portions of HTML, this can be a viable option, though.
 
 ### References
