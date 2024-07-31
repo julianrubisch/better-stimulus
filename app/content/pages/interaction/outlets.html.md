@@ -5,7 +5,6 @@ category: interaction
 preview_text: Send messages between controllers using the Stimulus Outlets API
 author: julianrubisch
 cache: true
-new: true
 ---
 
 Inter-process communication has been a source of many band-aids in the past. Luckily with [outlets](https://stimulus.hotwired.dev/reference/outlets) we now have an official way to invoke logic across controller boundaries.
