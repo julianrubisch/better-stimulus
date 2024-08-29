@@ -5,7 +5,6 @@ category: architecture
 preview_text: Use Stimulus values as the single source of truth for your controller state.
 author: julianrubisch
 cache: true
-new: true
 ---
 
 A question that often arises is how and where to store state in a Stimulus controller. The correct answer in 90% of all cases is in Stimulus [values](https://stimulus.hotwired.dev/reference/values).

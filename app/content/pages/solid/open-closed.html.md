@@ -5,7 +5,6 @@ category: solid
 preview_text: 
 author: julianrubisch
 cache: true
-new: true
 ---
 
 Good software design is - in part - realized by the capability to _**introduce changes**_ in a way that isn't painful. (If you'd like to read up on code smells that violate this principle, take a look at this [list of change preventers](https://refactoring.guru/refactoring/smells/change-preventers).)
