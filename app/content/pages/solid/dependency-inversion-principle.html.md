@@ -5,7 +5,6 @@ category: solid
 preview_text: 
 author: julianrubisch
 cache: true
-new: true
 ---
 
 The main purpose of the **Dependency Inversion Principle** is to provide loose coupling between software modules, summarized by the epitome "depend upon abstractions, not concretes".
