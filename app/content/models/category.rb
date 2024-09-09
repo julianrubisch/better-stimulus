@@ -6,6 +6,7 @@ class Category < ActiveHash::Base
     {name: "Events", slug: "events"},
     {name: "Integrating Libraries", slug: "integrating-libraries"},
     {name: "Interaction", slug: "interaction"},
+    {name: "Lifecycle", slug: "lifecycle"},
     {name: "SOLID", slug: "solid"},
     {name: "With Turbo", slug: "turbo"}
   ]
