@@ -11,7 +11,6 @@ servers:
       - 49.13.237.208
     options:
       network: "better-stimulus-private"
-    port: "3000:3000"
     labels:
       traefik.http.routers.better-stimulus-web.rule: Host(`www.betterstimulus.com`) || Host(`betterstimulus.com`)
       traefik.http.routers.better-stimulus-web-secure.entrypoints: websecure
