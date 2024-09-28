@@ -11,12 +11,12 @@ servers:
       - 49.13.237.208
     options:
       network: "better-stimulus-private"
-    labels:
-      traefik.http.routers.better-stimulus-web.rule: Host(`www.betterstimulus.com`) || Host(`betterstimulus.com`)
-      traefik.http.routers.better-stimulus-web-secure.entrypoints: websecure
-      traefik.http.routers.better-stimulus-web-secure.rule: Host(`www.betterstimulus.com`) || Host(`betterstimulus.com`)
-      traefik.http.routers.better-stimulus-web-secure.tls: true
-      traefik.http.routers.better-stimulus-web-secure.tls.certresolver: letsencrypt
+    # labels:
+    #   traefik.http.routers.better-stimulus-web.rule: Host(`www.betterstimulus.com`) || Host(`betterstimulus.com`)
+    #   traefik.http.routers.better-stimulus-web-secure.entrypoints: websecure
+    #   traefik.http.routers.better-stimulus-web-secure.rule: Host(`www.betterstimulus.com`) || Host(`betterstimulus.com`)
+    #   traefik.http.routers.better-stimulus-web-secure.tls: true
+    #   traefik.http.routers.better-stimulus-web-secure.tls.certresolver: letsencrypt
 
 # Credentials for your image host.
 registry:
@@ -44,6 +44,7 @@ env:
 
 # Configure builder setup.
 builder:
+  arch: amd64
   cache:
     type: registry
     image: julianrubisch/better-stimulus:build-cache
@@ -79,29 +80,30 @@ builder:
 #     directories:
 #       - data:/data
 
-# Configure custom arguments for Traefik
-traefik:
-  options:
-    publish:
-      - "443:443"
-    volume:
-      - "/letsencrypt/acme.json:/letsencrypt/acme.json"
-    network: "better-stimulus-private"
-  args:
-    entryPoints.web.address: ":80"
-    entryPoints.websecure.address: ":443"
-    certificatesResolvers.letsencrypt.acme.email: "admin@betterstimulus.com"
-    certificatesResolvers.letsencrypt.acme.storage: "/letsencrypt/acme.json"
-    certificatesResolvers.letsencrypt.acme.httpchallenge: true
-    certificatesResolvers.letsencrypt.acme.httpchallenge.entrypoint: web
-    log: true
-    accesslog: true
-#     accesslog.format: json
+proxy:
+  host: www.betterstimulus.com
+  host: betterstimulus.com
+  app_port: 3000
+  ssl: true
 
-# Configure a custom healthcheck (default is /up on port 3000)
-# healthcheck:
-#   path: /healthz
-#   port: 4000
+# Configure custom arguments for Traefik
+# traefik:
+#   options:
+#     publish:
+#       - "443:443"
+#     volume:
+#       - "/letsencrypt/acme.json:/letsencrypt/acme.json"
+#     network: "better-stimulus-private"
+#   args:
+#     entryPoints.web.address: ":80"
+#     entryPoints.websecure.address: ":443"
+#     certificatesResolvers.letsencrypt.acme.email: "admin@betterstimulus.com"
+#     certificatesResolvers.letsencrypt.acme.storage: "/letsencrypt/acme.json"
+#     certificatesResolvers.letsencrypt.acme.httpchallenge: true
+#     certificatesResolvers.letsencrypt.acme.httpchallenge.entrypoint: web
+#     log: true
+#     accesslog: true
+#     accesslog.format: json
 
 # Bridge fingerprinted assets, like JS and CSS, between versions to avoid
 # hitting 404 on in-flight requests. Combines all files from new and old
