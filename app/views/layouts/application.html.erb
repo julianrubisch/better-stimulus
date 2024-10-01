@@ -33,10 +33,12 @@
         <ul>
           <li><strong><%= link_to "Better Stimulus JS", "/" %></strong></li>
         </ul>
-        <ul class="search-container">
-          <%= render "pagefind/search" %>
+        <ul>
         </ul>
         <ul id="right-nav">
+          <li class="search-container">
+            <%= render "pagefind/search" %>
+          </li>
           <li><%= link_to "Sponsors", "/sponsors" %></li>
           <li><%= link_to "Contributors", "/contributors" %></li>
         </ul>
@@ -47,6 +49,9 @@
           <aside>
             <nav>
               <ul>
+                <li class="search-container">
+                  <%= render "pagefind/search" %>
+                </li>
                 <li><%= link_to "Sponsors", "/sponsors" %></li>
                 <li><%= link_to "Contributors", "/contributors" %></li>
               </ul>

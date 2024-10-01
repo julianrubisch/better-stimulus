@@ -329,11 +329,7 @@ aside.category-subnav {
 }
 
 .search-container {
-  width: 33%;
-
-  li {
-    width: 100%;
-  }
+  width: 100%;
 
   .search[role="button"] {
     display: flex;
@@ -347,6 +343,9 @@ aside.category-subnav {
     }
 
     kbd {
+      @media (min-width: 768px) {
+        margin-left: 1rem;
+      }
       @media (max-width: 767px) {
         display: none;
       }
