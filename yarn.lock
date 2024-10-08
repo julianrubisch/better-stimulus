@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@domchristie/turn/-/turn-3.1.1.tgz#404536f25878eda1ac74e90285441a3fd7d428f3"
   integrity sha512-hdS58VV28fhOCQbVu/tMKv5UIv8wDl12fiS2mmuD1sNhyMfeA99TqxsrM2IzvoXh3Izi/ry0QvfgQjwDiAOzow==
 
-"@pagefind/default-ui@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@pagefind/default-ui/-/default-ui-1.1.0.tgz#153a4d4621d11adc8d07d679f6b61a9e09594ce9"
-  integrity sha512-+XiAJAK++C64nQcD7s3Prdmd5S92lT05fwjOxm0L1jj80jbL+tmvcqkkFnPpoqhnicIPgcAX/Y5W0HRZnBt35w==
+"@pagefind/default-ui@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@pagefind/default-ui/-/default-ui-1.1.1.tgz#ba6c0f1f46f5a548ca3a79e79d3d9c400e783238"
+  integrity sha512-ZM0zDatWDnac/VGHhQCiM7UgA4ca8jpjA+VfuTJyHJBaxGqZMQnm4WoTz9E0KFcue1Bh9kxpu7uWFZfwpZZk0A==
 
 "@picocss/pico@^2.0.6":
   version "2.0.6"
