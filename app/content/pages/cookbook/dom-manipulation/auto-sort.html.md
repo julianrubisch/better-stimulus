@@ -8,6 +8,11 @@ code: |
   import { Controller } from '@hotwired/stimulus';
   
   export default class extends Controller {
+    static values = {
+      attributeName: String,
+      attributeType: { type: String, default: 'number' },
+    };
+  
     connect() {
       this.observer = new MutationObserver(this.#sortChildren.bind(this));
       this.observer.observe(this.element, { childList: true, subtree: true });
@@ -24,9 +29,21 @@ code: |
       this.element.innerHTML = '';
   
       children
-        .sort(
-          (a, b) => parseInt(a.dataset.timestamp) - parseInt(b.dataset.timestamp)
-        )
+        .sort((a, b) => {
+          switch (this.attributeTypeValue) {
+            case 'string': {
+              return a.dataset[this.attributeNameValue].localeCompare(
+                b.dataset[this.attributeNameValue]
+              );
+            }
+            case 'number':
+            default:
+              return (
+                Number(a.dataset[this.attributeNameValue]) -
+                Number(b.dataset[this.attributeNameValue])
+              );
+          }
+        })
         .forEach((child) => {
           this.element.append(child);
         });
