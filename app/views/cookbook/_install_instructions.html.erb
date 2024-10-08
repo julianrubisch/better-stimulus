@@ -1,0 +1,9 @@
+<% markdown = ApplicationMarkdown.new %>
+
+<% fenced_code = "```sh\nbin/rails app:template LOCATION='#{url}'```" %>
+
+<p>
+  To install this controller, run this command in your Rails app directory in the terminal:
+</p>
+
+<%== markdown.renderer.render(fenced_code) %>

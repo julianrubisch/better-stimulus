@@ -1,5 +1,3 @@
-<% current_category = Category.find_by(slug: current_page.data.category) %>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -34,6 +32,8 @@
           <li><strong><%= link_to "Better Stimulus JS", "/" %></strong></li>
         </ul>
         <ul>
+          <li><%= link_to "Knowledge Base", root_path %></li>
+          <li><%= link_to "Cookbook", "#{root_url}cookbook" %></li>
         </ul>
         <ul id="right-nav">
           <li class="search-container">
@@ -71,7 +71,7 @@
               <p><strong>Articles</strong></p>
             </header>
             <aside>
-              <%= render "nav/articles_nav", current_category: %>
+              <%= content_for :side_nav %>
               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= Rails.application.credentials.dig(:adsense, :adsense_id) %>"
                       crossorigin="anonymous"></script>
               <!-- betterstimulus-sidebar -->
@@ -87,21 +87,13 @@
             </aside>
           </article>
         </dialog>
-        <nav aria-label="breadcrumb">
-          <ul>
-            <li><button data-action="dialog#open" id="breadcrumb-dialog-button"><%= heroicon "bars-3" %></button></li>
-            <% if current_category %>
-              <li><a href="#"><%= current_category %></a></li>
-            <% end %>
-            <li><%= current_page.data.title %></li>
-          </ul>
-        </nav>
+        <%= content_for :breadcrumbs %>
       </div>
       <div></div>
       
       <!-- content row -->
       <aside id="articles-nav">
-        <%= render "nav/articles_nav", current_category: %>
+        <%= content_for :side_nav %>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= Rails.application.credentials.dig(:adsense, :adsense_id) %>"
                 crossorigin="anonymous"></script>
         <!-- betterstimulus-sidebar -->
