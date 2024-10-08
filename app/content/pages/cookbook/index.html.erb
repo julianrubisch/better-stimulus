@@ -1,7 +1,32 @@
 ---
-title: Cookbook
+title: The BetterStimulus Cookbook
 layout: cookbook
 ---
 
 <section>
+  <p>
+    Welcome to the cookbook section, where prepared recipes wait to be tried and tested. You can add each controller to your Rails app very easily with a <strong>Rails template</strong> command.
+  </p>
+  <p>
+    Currently the collection consists of:
+  </p>
+
+  <ul>
+    <% Cookbook::Category.all.each do |category| %>
+      <li>
+        <strong><%= category %></strong>
+        <ul>
+          <% PageModel.all.select { _1.category == category.slug }.each do |page| %>
+            <li>
+              <%= link_to page.request_path, class: "secondary #{"active" if current_page == page}" do %>
+                <small>
+                  <%= page.data.fetch("title", page.request_path) %>
+                </small>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
 </section>

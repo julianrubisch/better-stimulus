@@ -52,7 +52,9 @@
     <%= render "cookbook/install_instructions", url: template_url(current_page.data["category"], "auto-sort") %>
   <% end %>
   
-  <%= render "cookbook/code", embed_url: current_page.data["stackblitz_url"] %>
+  <% if current_page.data["stackblitz_url"] %>
+    <%= render "cookbook/code", embed_url: current_page.data["stackblitz_url"] %>
+  <% end %>
 
   <%= yield %>
 
