@@ -1,4 +1,4 @@
-<% current_category = KnowledgeBase::Category.find_by(slug: current_page.data.category) %>
+<% current_category = Cookbook::Category.find_by(slug: current_page.data.category) %>
 
 <% content_for :title do %>
   <title><%= current_page.data["title"] %> | <%= t('application.name') %></title>
@@ -33,9 +33,7 @@
 <% end %>
 
 <% content_for :content do %>
-  <% unless current_page.data["title"] == "Home" %>
-    <h1><%= current_page.data["title"] %> <% if current_page.data["new"] %><span class="label label-purple">New</span><% end %></h1>
-  <% end %>
+  <h1><%= current_page.data["title"] %> <% if current_page.data["new"] %><span class="label label-purple">New</span><% end %></h1>
   <% if current_page.data["author"].present? %>
     <% author = PageModel.find(current_page).author %>
     <h6>by <%= link_to_page author %> <%= image_tag "#{author.github_avatar_url}?size=24" %></h6>
@@ -49,7 +47,15 @@
       <% end %>
     </h6>
   <% end %>
+
+  <% if current_page.data["category"] %>
+    <%= render "cookbook/install_instructions", url: template_url(current_page.data["category"], "auto-sort") %>
+  <% end %>
+  
+  <%= render "cookbook/code", embed_url: current_page.data["stackblitz_url"] %>
+
   <%= yield %>
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= Rails.application.credentials.dig(:adsense, :adsense_id) %>"
      crossorigin="anonymous"></script>
   <!-- betterstimulus-in-article -->
@@ -65,19 +71,7 @@
 <% end %>
 
 <% content_for :side_nav do %>
-  <%= render "nav/articles_nav", current_category: %>
-<% end %>
-
-<% content_for :breadcrumbs do %>
-  <nav aria-label="breadcrumb">
-    <ul>
-      <li><button data-action="dialog#open" id="breadcrumb-dialog-button"><%= heroicon "bars-3" %></button></li>
-      <% if current_category %>
-        <li><a href="#"><%= current_category %></a></li>
-      <% end %>
-      <li><%= current_page.data.title %></li>
-    </ul>
-  </nav>
+  <%= render "nav/cookbook_nav", current_category: %>
 <% end %>
 
 <%= render template: "layouts/application" %>

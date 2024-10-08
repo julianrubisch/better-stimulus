@@ -1,4 +1,4 @@
-class Category < ActiveHash::Base
+class KnowledgeBase::Category < ActiveHash::Base
   self.data = [
     {name: "Architecture", slug: "architecture"},
     {name: "DOM Manipulation", slug: "dom_manipulation"},

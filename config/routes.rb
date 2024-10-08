@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "templates/:category/:recipe", to: "templates#show", as: :template, defaults: {format: "txt"}
+
   sitepress_pages
   sitepress_root
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

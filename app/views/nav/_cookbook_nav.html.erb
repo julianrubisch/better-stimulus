@@ -1,6 +1,6 @@
 <nav>
   <ul>
-    <% KnowledgeBase::Category.all.each do |category| %>
+    <% Cookbook::Category.all.each do |category| %>
       <li>
         <details <%= "open" if category == current_category %>>
           <summary><strong><%= category %></strong></summary>
