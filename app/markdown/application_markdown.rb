@@ -70,7 +70,7 @@ class ApplicationMarkdown < MarkdownRails::Renderer::Rails
       (tag.button class: "code-clipboard-button", data: {action: "clipboard#copy", clipboard_target: "button", title: "Copy to clipboard"} do
         heroicon "clipboard-document-check"
        end) + (tag.div class: "hidden", data: {clipboard_target: "source"} do
-                 code
+                 language != "html" ? raw(code) : code
                end) + (tag.pre class: language do
         raw FORMATTER.format(lexer.lex(code))
       end)
