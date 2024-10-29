@@ -62,10 +62,14 @@ Rails.application.configure do
   config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  config.cache_store = :solid_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
-  # config.active_job.queue_adapter = :resque
+  config.active_job.queue_adapter = :solid_queue
+  config.solid_queue.connects_to = { database: { writing: :queue } }
+  # Ensure authorization is enabled for the Solid Queue web UI
+  config.mission_control.jobs.base_controller_class = "MissionControl::BaseController"
+
   # config.active_job.queue_name_prefix = "betterstimulus_production"
 
   # Disable caching for Action Mailer templates even if Action Controller
@@ -98,4 +102,11 @@ Rails.application.configure do
   ]
   # Skip DNS rebinding protection for the default health check endpoint.
   config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  # Configure Solid Errors
+  config.solid_errors.connects_to = { database: { writing: :errors } }
+  config.solid_errors.send_emails = true
+  config.solid_errors.email_from = ""
+  config.solid_errors.email_to = ""
+  config.solid_errors.username = Rails.application.credentials.dig(:solid_errors, :username)
+  config.solid_errors.password = Rails.application.credentials.dig(:solid_errors, :password)
 end
