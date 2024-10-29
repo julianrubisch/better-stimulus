@@ -67,7 +67,7 @@ code: |
   }
 author: julianrubisch
 cache: true
-new: true
+new: false
 ---
 
 ### Configuration
