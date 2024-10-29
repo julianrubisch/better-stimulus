@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.3", ">= 7.1.3.2"
+gem "rails", "~> 7.2"
 
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
@@ -66,8 +66,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "litestack", "~> 0.4.3"
-
 gem "litestream", "~> 0.10.1"
 
 gem "sitepress-rails", "~> 4.0"
@@ -86,3 +84,15 @@ gem "active_hash", "~> 3.3"
 gem "heroicon", "~> 1.0"
 
 gem "meta-tags", "~> 2.21"
+# Ensure all SQLite connections are properly configured
+gem "activerecord-enhancedsqlite3-adapter", "~> 0.8.0"
+# Add Solid Queue for background jobs
+gem "solid_queue", "~> 0.9"
+# Add a web UI for Solid Queue
+gem "mission_control-jobs", "~> 0.3"
+# Add Solid Cache as an Active Support cache store
+gem "solid_cache", "~> 1.0"
+# Add Solid Cable for web sockets
+gem "solid_cable", "~> 3.0"
+# Add Solid Errors for error monitoring
+gem "solid_errors", "~> 0.5"
