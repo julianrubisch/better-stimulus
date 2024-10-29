@@ -60,6 +60,20 @@ main {
   }
 }
 
+nav li.sign-in-out-item {
+  white-space: nowrap;
+
+  svg {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+  }
+
+  button {
+    margin-bottom: 0;
+    padding: 0.5rem 1rem;
+  }
+}
+
 #right-nav {
   @media (max-width: 767px) {
     display: none;

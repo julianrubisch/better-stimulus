@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <% if content_for? :title %>
-      <%= yield :title %>
-    <% else %>
-      <title><%= current_page.data["title"] %> | Betterstimulus | </title>
-    <% end %>
+    <title>Betterstimulus</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -44,19 +40,6 @@
             <%= render "pagefind/search" %>
           </li>
           <li><%= link_to "Contributors", "/contributors" %></li>
-          <li class="sign-in-out-item">
-            <% if Current.session.present? %>
-              <%= button_to Current.session, method: :delete do %>
-                Sign out
-                <%= heroicon "arrow-right-on-rectangle" %>
-              <% end %>
-            <% else %>
-              <%= link_to sign_in_path do %>
-                Sign in
-                <%= heroicon "arrow-left-on-rectangle" %>
-              <% end %>
-            <% end %>
-          </li>
         </ul>
         <!-- mobile nav -->
         <div id="mobile-nav-button">
@@ -69,19 +52,6 @@
                   <%= render "pagefind/search" %>
                 </li>
                 <li><%= link_to "Contributors", "/contributors" %></li>
-                <li class="sign-in-out-item">
-                  <% if Current.session.present? %>
-                    <%= button_to Current.session, method: :delete do %>
-                      Sign out
-                      <%= heroicon "arrow-right-on-rectangle" %>
-                    <% end %>
-                  <% else %>
-                    <%= link_to sign_in_path do %>
-                      Sign in
-                      <%= heroicon "arrow-left-on-rectangle" %>
-                    <% end %>
-                  <% end %>
-                </li>
               </ul>
             </nav>
           </aside>
@@ -102,62 +72,10 @@
         </div>
         <div></div>
       <% end %>
-      
-      <!-- breadcrumb row -->
-      <div></div>
-      <div id="breadcrumbs" data-controller="dialog">
-        <dialog data-dialog-target="dialog">
-          <article>
-            <header>
-              <button aria-label="Close" rel="prev" data-action="search#close"></button>
-              <p><strong>Articles</strong></p>
-            </header>
-            <aside>
-              <%= content_for :side_nav %>
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= Rails.application.credentials.dig(:adsense, :adsense_id) %>"
-                      crossorigin="anonymous"></script>
-              <!-- betterstimulus-sidebar -->
-              <ins class="adsbygoogle"
-                   style="display:block"
-                   data-ad-client="<%= Rails.application.credentials.dig(:adsense, :adsense_id) %>"
-                   data-ad-slot="8143181187"
-                   data-ad-format="auto"
-                   data-full-width-responsive="true"></ins>
-              <script>
-               (adsbygoogle = window.adsbygoogle || []).push({});
-              </script>
-            </aside>
-          </article>
-        </dialog>
-        <%= content_for :breadcrumbs %>
-      </div>
-      <div></div>
-      
-      <!-- content row -->
-      <aside id="articles-nav">
-        <%= content_for :side_nav %>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= Rails.application.credentials.dig(:adsense, :adsense_id) %>"
-                crossorigin="anonymous"></script>
-        <!-- betterstimulus-sidebar -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="<%= Rails.application.credentials.dig(:adsense, :adsense_id) %>"
-             data-ad-slot="8143181187"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </aside>
 
-      <article class="overflow-auto" data-turn-enter data-turn-exit>
-        <%= content_for?(:content) ? yield(:content) : yield %>
-      </article>
-
-      <aside id="toc">
-        <!-- TODO TOC -->
-        <!-- <strong>On this page</strong> -->
-      </aside>
+      <div></div>
+      <div><%= yield %></div>
+      <div></div>
     </main>
     <footer>
       <div class="grid container">
