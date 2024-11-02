@@ -1,7 +1,7 @@
 <% current_category = Cookbook::Category.find_by(slug: current_page.data.category) %>
 
 <% content_for :title do %>
-  <title><%= current_page.data["title"] %> | <%= t('application.name') %></title>
+  <title><%= current_page.data["title"] %> | Betterstimulus</title>
 <% end %>
 
 <% if current_page.data["image"].present? %>
