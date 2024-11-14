@@ -7,6 +7,9 @@ class Sessions::OmniauthController < ApplicationController
   def create
     @user = User.create_with(user_params).find_or_initialize_by(omniauth_params)
 
+    @user.access_token = omniauth.info.access_token
+    @user.refresh_token = omniauth.info.refresh_token
+
     if @user.save
       session_record = @user.sessions.create!
       cookies.signed.permanent[:session_token] = { value: session_record.id, httponly: true }
@@ -22,7 +25,9 @@ class Sessions::OmniauthController < ApplicationController
 
   private
     def user_params
-      { email: omniauth.info.email, password: SecureRandom.base58, verified: true }
+      { email: omniauth.info.email,
+        password: SecureRandom.base58,
+        verified: true }
     end
 
     def omniauth_params

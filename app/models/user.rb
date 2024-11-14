@@ -9,6 +9,7 @@ class User < ApplicationRecord
     password_salt.last(10)
   end
 
+  encrypts :access_token, :refresh_token
 
   has_many :sessions, dependent: :destroy
   has_many :events, dependent: :destroy

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_29_083660) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_14_075856) do
   create_table "events", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "action", null: false
@@ -38,6 +38,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_29_083660) do
     t.string "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "access_token"
+    t.text "refresh_token"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

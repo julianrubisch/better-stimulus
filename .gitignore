@@ -46,3 +46,5 @@
 /app/assets/.DS_Store
 /public/pagefind/
 /.kamal/secrets
+
+/config/credentials/development.key
