@@ -38,4 +38,16 @@ class User < ApplicationRecord
   after_update if: [:verified_previously_changed?, :verified?] do
     events.create! action: "email_verified"
   end
+
+  def patron?
+    identity_data = patreon_client.get_identity("include" => "memberships.campaign", "fields[member]" => "patron_status")
+
+    return false unless identity_data["included"].present?
+
+    identity_data["included"].any? { _1["attributes"]["patron_status"] == "active_patron" && _1["relationships"]["campaign"]["data"]["id"] == Rails.application.credentials.dig(:patreon, :campaign_id).to_s }
+  end
+
+  def patreon_client
+    @patreon_client ||= PatreonClient.new(access_token)
+  end
 end

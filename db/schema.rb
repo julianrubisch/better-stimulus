@@ -40,6 +40,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_14_075856) do
     t.datetime "updated_at", null: false
     t.text "access_token"
     t.text "refresh_token"
+    t.integer "patreon_id"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

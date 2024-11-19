@@ -9,6 +9,7 @@ class Sessions::OmniauthController < ApplicationController
 
     @user.access_token = omniauth.info.access_token
     @user.refresh_token = omniauth.info.refresh_token
+    @user.patreon_id = omniauth.uid
 
     if @user.save
       session_record = @user.sessions.create!
