@@ -17,9 +17,10 @@
 <% content_for :meta do %>
   <% site = Sitepress::Site.new(root_path: "app/content") %>
   <%= display_meta_tags site: "Betterstimulus",
-                        title: "Betterstimulus | #{current_page.data["title"]}",
+                        title: "#{current_page.data["title"]}",
                         description: current_page.data["preview_text"],
                         icon: '/favicon.ico',
+                        reverse: current_page.data["title"] != "Home",
                         og: {
                           title: :title,
                           site_name: :site,
