@@ -87,7 +87,7 @@ export default class extends Controller {
 ```
 
 ### Rationale
-Stimulus controllers are meant to be used as mixins themselves (i.e. applying multiple controllers to one DOM element, thus mixing in behavior). Sometimes though, it might even be advisable to share behavior on the controller level. [Inheritance](./inheritance.md) isn't always the answer to this - more often than not, it leads to architectural issues down the road, e.g. when you discover that you need to inherit behavior from two different parents - which is impossible in JavaScript. Often, it's preferable to mix in behavior that can be used across controllers with a simple trick.
+Stimulus controllers are meant to be used as mixins themselves (i.e. applying multiple controllers to one DOM element, thus mixing in behavior). Sometimes though, it might even be advisable to share behavior on the controller level. Inheritance isn't always the answer to this - more often than not, it leads to architectural issues down the road, e.g. when you discover that you need to inherit behavior from two different parents - which is impossible in JavaScript. Often, it's preferable to mix in behavior that can be used across controllers with a simple trick.
 
 If you're unsure about whether inheritance or mixin is the correct pattern, ask yourself:
 
