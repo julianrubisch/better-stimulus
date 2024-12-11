@@ -34,7 +34,7 @@
 <% end %>
 
 <% content_for :content do %>
-  <h1><%= current_page.data["title"] %> <% if current_page.data["new"] %><span class="label label-purple">New</span><% end %></h1>
+  <h1><%= current_page.data["title"] %> <% if current_page.data["auth"] %><span class="label label-blue">Pro</span><% end %> <% if current_page.data["new"] %><span class="label label-purple">New</span><% end %></h1>
   <% if current_page.data["author"].present? %>
     <% author = PageModel.find(current_page).author %>
     <h6>by <%= link_to_page author %> <%= image_tag "#{author.github_avatar_url}?size=24" %></h6>
@@ -49,15 +49,27 @@
     </h6>
   <% end %>
 
-  <% if current_page.data["category"] %>
-    <%= render "cookbook/install_instructions", url: template_url(current_page.data["category"], current_page.request_path.split("/").last) %>
+  <%# if authenticated, authorize %>
+  <% if current_page.data["category"] && (!current_page.data["auth"] || Current.user&.patron?) %>
+    <%= render "cookbook/install_instructions", url: template_url(current_page.data["category"], current_page.request_path.split("/").last)  %>
+    <%# TODO also check if authenticated in template controller %>
   <% end %>
   
-  <% if current_page.data["stackblitz_url"] %>
+  <% if current_page.data["stackblitz_url"] && (!current_page.data["auth"] || Current.user&.patron?) %>
     <%= render "cookbook/code", embed_url: current_page.data["stackblitz_url"] %>
   <% end %>
 
-  <%= yield %>
+  <% if current_page.data["auth"] && !Current.user&.patron? %>
+    <section><%= current_page.data["preview_text"] %></section>
+  <% else %>
+      <%= yield %>
+  <% end %>
+
+  <% if current_page.data["auth"] && !Current.user&.patron? %>
+    <section>
+      <%= button_to "Unlock this recipe with your Hotwire Club Account", "/auth/patreon", "data-turbo" => false %>
+    </section>
+  <% end %>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=<%= Rails.application.credentials.dig(:adsense, :adsense_id) %>"
      crossorigin="anonymous"></script>

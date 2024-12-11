@@ -2,7 +2,7 @@
 layout: cookbook
 title: Dark Mode
 category: theming
-preview_text: 
+preview_text: Use this controller to implement a dark mode feature in your web application using Stimulus. This recipe covers configuration, implementation details, customization options, and common pitfalls to enhance user experience with theme switching.
 stackblitz_url: https://stackblitz.com/edit/better-stimulus-dark-mode?file=index.html,controllers%2Fdark_mode_controller.js&embed=1
 code: |
   import { Controller } from '@hotwired/stimulus';

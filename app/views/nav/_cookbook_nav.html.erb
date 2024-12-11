@@ -15,6 +15,7 @@
                           <%= page.data.fetch("title", page.request_path) %>
                           <% if current_page == page %></strong><% end %>
                       </small>
+                      <% if page.data["auth"] %><span class="label label-blue">Pro</span><% end %>
                       <% if page.data["new"] %><span class="label label-purple">New</span><% end %>
                     <% end %>
                   </li>

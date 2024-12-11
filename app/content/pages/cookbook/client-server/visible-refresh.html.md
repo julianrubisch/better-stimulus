@@ -2,7 +2,7 @@
 layout: cookbook
 title: Refresh when Visible
 category: client-server
-preview_text: 
+preview_text: Use this Stimulus controller to refresh the page content when it becomes visible, utilizing the Page Visibility API to manage updates seamlessly in real-time applications. This enhances user experience on dashboards and other dynamic interfaces.
 stackblitz_url: https://stackblitz.com/edit/better-stimulus-visible-refresh-poll?file=index.html,controllers%2Fvisible_poll_controller.js&embed=1
 code: |
   import { Controller } from "@hotwired/stimulus";
@@ -35,7 +35,6 @@ code: |
   }
 author: julianrubisch
 cache: true
-new: true
 ---
 
 ### Configuration

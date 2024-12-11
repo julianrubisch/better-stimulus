@@ -2,7 +2,7 @@
 layout: cookbook
 title: Auto Sort
 category: dom-manipulation
-preview_text: 
+preview_text: Use this Stimulus controller to dynamically sort DOM elements based on configurable data attributes, ideal for handling unordered elements from asynchronous sources like Websockets.
 stackblitz_url: https://stackblitz.com/edit/better-stimulus-auto-sort?file=index.html,controllers%2Fsort_controller.js&embed=1
 code: |
   import { Controller } from '@hotwired/stimulus';
