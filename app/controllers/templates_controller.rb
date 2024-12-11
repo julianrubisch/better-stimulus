@@ -2,7 +2,13 @@ class TemplatesController < ApplicationController
   after_action :track_download
 
   def show
-    @code = Cookbook::Recipe.find("cookbook/#{params[:category]}/#{params[:recipe]}").code
+    recipe = Cookbook::Recipe.find("cookbook/#{params[:category]}/#{params[:recipe]}")
+    @code = recipe.code
+
+    if recipe.auth && !Current.user&.patron?
+      head :forbidden
+      return
+    end
 
     respond_to do |format|
       format.text

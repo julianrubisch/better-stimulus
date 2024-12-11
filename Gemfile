@@ -109,3 +109,5 @@ gem "omniauth-patreon"
 # build a Patreon client
 gem "httparty"
 gem "ahoy_matey"
+
+gem "pundit", "~> 2.4"

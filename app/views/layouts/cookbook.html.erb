@@ -50,22 +50,22 @@
   <% end %>
 
   <%# if authenticated, authorize %>
-  <% if current_page.data["category"] && (!current_page.data["auth"] || Current.user&.patron?) %>
+  <% if current_page.data["category"] && RecipePolicy.new(Current.user, current_page).show? %>
     <%= render "cookbook/install_instructions", url: template_url(current_page.data["category"], current_page.request_path.split("/").last)  %>
     <%# TODO also check if authenticated in template controller %>
   <% end %>
   
-  <% if current_page.data["stackblitz_url"] && (!current_page.data["auth"] || Current.user&.patron?) %>
+  <% if current_page.data["stackblitz_url"] && RecipePolicy.new(Current.user, current_page).show? %>
     <%= render "cookbook/code", embed_url: current_page.data["stackblitz_url"] %>
   <% end %>
 
-  <% if current_page.data["auth"] && !Current.user&.patron? %>
+  <% if !RecipePolicy.new(Current.user, current_page).show? %>
     <section><%= current_page.data["preview_text"] %></section>
   <% else %>
-      <%= yield %>
+    <%= yield %>
   <% end %>
 
-  <% if current_page.data["auth"] && !Current.user&.patron? %>
+  <% if !RecipePolicy.new(Current.user, current_page).show? %>
     <section>
       <%= button_to "Unlock this recipe with your Hotwire Club Account", "/auth/patreon", "data-turbo" => false %>
     </section>

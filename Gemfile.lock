@@ -245,6 +245,8 @@ GEM
     public_suffix (5.0.5)
     puma (6.4.3)
       nio4r (~> 2.0)
+    pundit (2.4.0)
+      activesupport (>= 3.0.0)
     raabro (1.4.0)
     racc (1.8.1)
     rack (2.2.10)
@@ -414,6 +416,7 @@ DEPENDENCIES
   omniauth-rails_csrf_protection
   propshaft
   puma (>= 5.0)
+  pundit (~> 2.4)
   rails (~> 7.2)
   redis (>= 4.0.1)
   rouge (~> 4.2)
