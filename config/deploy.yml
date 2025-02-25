@@ -74,7 +74,6 @@ builder:
 
 proxy:
   host: www.betterstimulus.com,betterstimulus.com
-  app_port: 3000
   ssl: true
 
 # Bridge fingerprinted assets, like JS and CSS, between versions to avoid
