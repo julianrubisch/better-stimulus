@@ -5,7 +5,6 @@ category: lifecycle
 preview_text: Use Stimulus values as the single source of truth for your controller state.
 author: julianrubisch
 cache: true
-new: true
 ---
 
 The `connect` lifecycle callback is the most used hook to set up a controller when it is (in some circumstances repeatedly) connected to the DOM.

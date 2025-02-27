@@ -33,7 +33,6 @@ code: |
     }
   }
 author: julianrubisch
-new: true
 auth: true
 ---
 

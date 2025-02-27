@@ -5,7 +5,6 @@ category: architecture
 preview_text: Avoid mixing targetless controllers with those attached to a target.
 author: julianrubisch
 cache: true
-new: true
 ---
 
 In general, there are two types of controllers:
