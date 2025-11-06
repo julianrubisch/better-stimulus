@@ -51,7 +51,7 @@ export default class extends Controller {
 ```
 
 ### Rationale
-You have split your controllers according to the [Single Responsibility Principe](../solid/single-responsibility), and now want to send messages from one to another. This can occur, for example, in data-rich complex UIs like dashboards, data tables, media elements etc.
+You have split your controllers according to the [Single Responsibility Principle](../solid/single-responsibility), and now want to send messages from one to another. This can occur, for example, in data-rich complex UIs like dashboards, data tables, media elements etc.
 
 ### Contraindications
 Tracking outlets via their selectors in the HTML can be tedious. The markup can become bloated and confusing. So I'd advise to use it sparingly, and look into [custom events](https://stimulus.hotwired.dev/reference/controllers#cross-controller-coordination-with-events) as an alternative.
